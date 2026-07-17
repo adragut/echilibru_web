@@ -1,0 +1,189 @@
+{
+  "seo": {
+    "title": "Echilibru si vindecare, in ritmul naturii.",
+    "description": "Dezvoltare personala asistata de cai, hipoterapie si teambuilding-uri unice intr-un spatiu de siguranta si conexiune."
+  },
+  "navigation": {
+    "logo": "ECHILIBRU",
+    "links": [
+      {
+        "href": "#despre",
+        "label": "Despre"
+      },
+      {
+        "href": "#servicii",
+        "label": "Servicii"
+      },
+      {
+        "href": "#echipa",
+        "label": "Echipa"
+      },
+      {
+        "href": "#contact",
+        "label": "Contact"
+      }
+    ],
+    "cta": "Programeaza o sedinta"
+  },
+  "hero": {
+    "headline": "Echilibru si vindecare, in ritmul naturii",
+    "subheadline": "Dezvoltare personala asistata de cai, hipoterapie si teambuilding-uri unice intr-un spatiu de siguranta si conexiune.",
+    "ctaPrimary": "Descopera Serviciile",
+    "ctaSecondary": "Contacteaza-ne",
+    "imageAlt": "Cai in pasune"
+  },
+  "philosophie": {
+    "sectionTitle": "Filosofia Noastra",
+    "description": "Puterea vindecatoare a caiilor se bazeaza pe prezenta lor non-judecatoare si asupra abilitatii lor de a reflecta starea noastra emotionala.",
+    "values": [
+      {
+        "title": "Acceptare",
+        "description": "Caiii reflecta pur si simplu starea noastra emotionala interiora fara a judeca, creand un spatiu sigur pentru expunere autentica.",
+        "icon": "users"
+      },
+      {
+        "title": "Ancorare Emotionala",
+        "description": "Prezenta calului ajuta la conectarea cu sentimentele noastre interioare profunde, facilitand procese de vindecare autentica.",
+        "icon": "sun"
+      },
+      {
+        "title": "Recuperare Fizica",
+        "description": "Munca echilibrata si ritmicitate pentru imbunatatirea posturii, tonusului muscular si coordonarii neuromotore.",
+        "icon": "heart"
+      }
+    ]
+  },
+  "servicii": {
+    "sectionTitle": "Serviciile Noastre",
+    "description": "Oferim terapii specializate adaptate nevoilor fiecarui individ sau grup.",
+    "cards": [
+      {
+        "title": "Dezvoltare Personala Asistata de Cai",
+        "description": "Focus pe cresterea increderii in sine, autocunoastere si dezvoltare personala prin interactiunea cu caii docili, in acel spatiu sigur pentru explorare personala autentica.",
+        "imageAlt": "Zana asistata de cai"
+      },
+      {
+        "title": "Hipoterapie",
+        "description": "Specializata in corectia posturii, tonifierea musculara si recuperare neuromotorie. Exercitii terapeutice asistate de cai pentru rezultate fizice measurabile.",
+        "imageAlt": "Hipoterapie"
+      },
+      {
+        "title": "Teambuilding & Grupuri",
+        "description": "Eforturi de dezvoltare coordonata pentru construirea increderii si coeziunii in echipa. Activitati practice de cooperare si rezolvare de probleme in mediul natural.",
+        "imageAlt": "Echipa in pasune"
+      }
+    ]
+  },
+  "echipa": {
+    "sectionTitle": "Oameni si Cai",
+    "description": "Noii nostri asistente de terapie si terapeuti calificati, impartasind pasiunea pentru echilibru si vindecare.",
+    "members": [
+      {
+        "name": "Anca",
+        "role": "Psihoterapeut si Facilitator",
+        "description": "Terapeut specializat in tehnici de baza si cognitiv-comportamentale in asistenta asistata de cai (CATT).",
+        "imageAlt": "Terapeut uman"
+      },
+      {
+        "name": "Cris",
+        "role": "Linistit si protector",
+        "description": "Certificat CAREGiver prin intermediul echipamentelor THRIVE. Promoveaza induiosarea si echilibrul de sine.",
+        "imageAlt": "Cal Trot"
+      },
+      {
+        "name": "Andrei Dumitrescu",
+        "role": "Rabdator si intelept",
+        "description": "Terapeut veterinar calificat in hipoterapie si abilitati cognitive in specialitate. Cofondator al echipei noastre de fondator.",
+        "imageAlt": "Terapeut uman 2"
+      }
+    ]
+  },
+  "contact": {
+    "sectionTitle": "Contacteaza-ne",
+    "description": "Suntem aici pentru a raspunde la intrebarile tale si sa ajutam cu primul pas spre vindecare.",
+    "form": {
+      "nameLabel": "Numele complet",
+      "emailLabel": "Adresa de email",
+      "serviceLabel": "Serviciu de interes",
+      "messageLabel": "Mesaj",
+      "submit": "Trimite mesajul",
+      "serviceOptions": [
+        "Dezvoltare Personala Asistata de Cai",
+        "Hipoterapie",
+        "Teambuilding & Grupuri",
+        "Altele"
+      ]
+    },
+    "socialMedia": {
+      "title": "Social Media",
+      "links": [
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/terapie.cai.echilibru",
+          "icon": "facebook"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/terapie_echilibru",
+          "icon": "instagram"
+        }
+      ]
+    },
+    "info": {
+      "title": "Informatii de contact",
+      "address": {
+        "label": "Adresa",
+        "lines": [
+          "Strada Principala 118, Lacu Turcului, Romania, 107043",
+          "Ploiesti · Bucuresti · Ilfov · Comuna Balta Doamnei, Prahova"
+        ]
+      },
+      "phone": {
+        "label": "Telefon",
+        "value": "+40 723 164 124"
+      },
+      "email": {
+        "label": "Email",
+        "value": "terapie.echilibru@gmail.com"
+      }
+    },
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2063.2454186498103!2d26.224223137777255!3d44.76600166463324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sro!4v1784293377870!5m2!1sen!2sro"
+  },
+  "footer": {
+    "logo": "ECHILIBRU",
+    "tagline": "Echilibru si vindecare, in ritmul naturii.",
+    "links": [
+      {
+        "href": "#despre",
+        "label": "Despre"
+      },
+      {
+        "href": "#servicii",
+        "label": "Servicii"
+      },
+      {
+        "href": "#echipa",
+        "label": "Echipa"
+      },
+      {
+        "href": "#contact",
+        "label": "Contact"
+      }
+    ],
+    "copyright": "&copy; 2026 Terapie ECHILIBRU. Toate drepturile rezervate.",
+    "tagline2": "Un spatiu de siguranta si conexiune."
+  },
+  "about": {
+    "sectionTitle": "Despre ECHILIBRU",
+    "description": "Centrul nostru de terapie asistata de cai ofera un spatiu sigur si ingrijitor pentru dezvoltare personala, recuperare fizica si formare in echipa. Folosim abordari bazate pe dovezi prin intermediul interactiunii autentice cu caii.",
+    "imageAlt": "Hipoterapie",
+    "passionTitle": "Pasiunea noastra pentru compasiune si conectare autentica",
+    "passionText1": "Fiecare sedinta este gandita special pentru a ajuta clientii sa gaseasca armonia interioara prin intermediul legaturii speciale dintre om si cal. Caiii nostri sunt animale calduroase, rabdatoare, specializate in asistenta terapeutica.",
+    "passionText2": "Te invitam sa experimentezi puterea vindecatoare a iubirii neconditionate si a prezentei calului, creand un spatiu de siguranta pentru crestere personala si recuperare.",
+    "badges": [
+      "Profesionisti calificati",
+      "Spatiu de siguranta",
+      "Elegant si autentic"
+    ]
+  }
+}
