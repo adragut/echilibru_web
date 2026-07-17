@@ -1,0 +1,629 @@
+---
+// No imports needed for the main page
+---
+
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Echilibru și vindecare, în ritmul naturii - Terapie ECHILIBRU</title>
+    <meta name="description" content="Dezvoltare personală asistată de cai, hipoterapie și teambuilding-uri unice într-un spațiu de siguranță și conexiune." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-cream-50 text-gray-700">
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass">
+      <nav class="mx-auto max-w-7xl px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="#" class="text-2xl font-bold text-forest-950">ECHILIBRU</a>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#despre" class="hover:text-sand-900 transition-colors">Despre</a>
+            <a href="#servicii" class="hover:text-sand-900 transition-colors">Servicii</a>
+            <a href="#echipa" class="hover:text-sand-900 transition-colors">Echipa</a>
+            <a href="#contact" class="hover:text-sand-900 transition-colors">Contact</a>
+            <a
+              href="#"
+              class="bg-forest-950 text-white px-6 py-2 rounded-full hover:bg-forest-900 transition-colors"
+              >Programează o ședință</a
+            >
+          </div>
+
+          <button id="mobile-menu-btn" class="md:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4">
+          <a href="#despre" class="block hover:text-sand-900 transition-colors">Despre</a>
+          <a href="#servicii" class="block hover:text-sand-900 transition-colors">Servicii</a>
+          <a href="#echipa" class="block hover:text-sand-900 transition-colors">Echipa</a>
+          <a href="#contact" class="block hover:text-sand-900 transition-colors">Contact</a>
+          <a
+            href="#"
+            class="block bg-forest-950 text-white px-6 py-2 rounded-full hover:bg-forest-900 transition-colors text-center"
+            >Programează o ședință</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="relative min-h-screen flex items-center pt-20">
+        <div class="absolute inset-0 bg-gradient-to-b from-forest-950/20 to-transparent z-0"></div>
+        <div class="mx-auto max-w-7xl px-6 py-24 md:py-32 relative z-10">
+          <div class="flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-1/2">
+              <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-forest-950 mb-6 leading-tight">
+                Echilibru și vindecare, în ritmul naturii
+              </h1>
+              <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+                Dezvoltare personală asistată de cai, hipoterapie și teambuilding-uri unice într-un spațiu de siguranță și conexiune.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="#servicii"
+                  class="bg-forest-950 text-white px-8 py-3 rounded-full hover:bg-forest-900 transition-colors text-center"
+                  >Descoperă Serviciile</a
+                >
+                <a
+                  href="#contact"
+                  class="border-2 border-forest-950 text-forest-950 px-8 py-3 rounded-full hover:bg-forest-950 hover:text-white transition-colors text-center"
+                  >Contactează-ne</a
+                >
+              </div>
+            </div>
+            <div class="md:w-1/2">
+              <div class="relative">
+                <div
+                  class="absolute -inset-4 bg-sand-900/20 rounded-2xl transform rotate-3"
+                ></div>
+                <img
+                  src="https://images.unsplash.com/photo-1548602185-3c0970776e39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Cai în pășune"
+                  class="relative rounded-2xl shadow-2xl object-cover w-full h-96 md:h-[500px]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="despre" class="py-24 bg-white">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-forest-950 mb-4">
+              Despre Terapie ECHILIBRU
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Centrul nostru de terapie asistată de cai oferă un spațiu sigur și îngrijitor pentru dezvoltare personală, recuperare fizică și formare în echipă. Folosim abordări bazate pe dovezi prin intermediul interacțiunii autentice cu caii.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1518133910546-b466b8981c49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Hipoterapia"
+                class="rounded-2xl shadow-xl object-cover w-full h-80"
+              />
+            </div>
+            <div>
+              <h3 class="text-2xl font-heading font-semibold text-forest-950 mb-4">
+                Pasiunea noastră pentru echilibru și înduioșare
+              </h3>
+              <p class="text-gray-700 mb-4">
+                Fiecare sedință este gândită special pentru a ajuta clienții să găsească armonia interioară prin intermediul legăturii speciale dintre om și cal. Caiii noștri sunt animalecălduroase, răbdătoare, specializate în asistența terapeutică.
+              </p>
+              <p class="text-gray-700 mb-6">
+                Te invităm să experimentezi puterea vindecătoare a iubirii necondiționate și a prezenței calului, creând un spațiu de siguranță pentru creștere personală și recuperare.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <span class="bg-cream-50 text-forest-950 px-4 py-2 rounded-full text-sm">Profesioniști calificați</span>
+                <span class="bg-cream-50 text-forest-950 px-4 py-2 rounded-full text-sm">Spațiu de siguranță
+                </span>
+                <span class="bg-cream-50 text-forest-950 px-4 py-2 rounded-full text-sm">Elegant și autentic</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="philosophy" class="py-24 bg-cream-50">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-forest-950 mb-4">
+              Filosofia Noastră
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Puterea vindecătoare a caiilor se bazează pe prezența lor non-judecătoare și asupra abilității lor de a reflecta starea noastră emoțională.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl hover-lift">
+              <div class="w-12 h-12 bg-forest-950/10 rounded-full flex items-center justify-center mb-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-heading font-semibold text-forest-950 mb-3">
+                Mirare Non-Judecătoare
+              </h3>
+              <p class="text-gray-600">
+                Caiii reflectă pur și simplu starea noastră emoțională interioră fără a judeca, creând un spațiu sigur pentru expunere autentică.
+              </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl hover-lift">
+              <div class="w-12 h-12 bg-forest-950/10 rounded-full flex items-center justify-center mb-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="2" x2="12" y2="6"></line>
+                  <line x1="12" y1="18" x2="12" y2="22"></line>
+                  <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+                  <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+                  <line x1="2" y1="12" x2="6" y2="12"></line>
+                  <line x1="18" y1="12" x2="22" y2="12"></line>
+                </svg>
+              </div>
+              <h3 class="text-xl font-heading font-semibold text-forest-950 mb-3">
+                Grundare Emoțională
+              </h3>
+              <p class="text-gray-600">
+                Prezența calului ajută la conectarea cu sentimentele noastre interioare profunde, facilitând procese de vindecare autentică.
+              </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl hover-lift">
+              <div class="w-12 h-12 bg-forest-950/10 rounded-full flex items-center justify-center mb-6">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 6.67l-2.06-2.06a5.5 5.5 0 0 0-7.78 7.78l12 12a5.5 5.5 0 0 0 7.78-7.78l-3.16-3.16z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-heading font-semibold text-forest-950 mb-3">
+                Recuperare Fizică
+              </h3>
+              <p class="text-gray-600">
+                Muncă echilibrată și ritmicitate pentru îmbunătățirea posturii, tonusului muscular și coordonării neuromotore.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicii" class="py-24 bg-white">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-forest-950 mb-4">
+              Serviciile Noastre
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Oferim terapii specializate adaptate nevoilor fiecărui individ sau grup.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="bg-cream-50 rounded-2xl overflow-hidden shadow-md hover-lift transition-all duration-300"
+            >
+              <div class="h-48 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1541899460891-233d6373cc2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Zâna asistată de cai"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-8">
+                <h3 class="text-xl font-heading font-semibold text-forest-950 mb-3">
+                  Dezvoltare Personală Asistată de Cai
+                </h3>
+                <p class="text-gray-600">
+                  Focus pe creșterea încrederii în sine, autocunoaștere și dezvoltare personală prin interacțiunea cu caii docili, în acel spațiu sigur pentru explorare personală autentică.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-cream-50 rounded-2xl overflow-hidden shadow-md hover-lift transition-all duration-300"
+            >
+              <div class="h-48 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1518133910546-b466b8981c49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Hipoterapie"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-8">
+                <h3 class="text-xl font-heading font-semibold text-forest-950 mb-3">
+                  Hipoterapie
+                </h3>
+                <p class="text-gray-600">
+                  Specializată în corecția posturii, tonifierea musculară și recuperare neuromotorie. Exerciții terapeutice asistate de cai pentru rezultate fizice measurabile.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-cream-50 rounded-2xl overflow-hidden shadow-md hover-lift transition-all duration-300"
+            >
+              <div class="h-48 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1497486751635-3c7836e30334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Echipa în pășune"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-8">
+                <h3 class="text-xl font-heading font-semibold text-forest-950 mb-3">
+                  Teambuilding & Grupuri
+                </h3>
+                <p class="text-gray-600">
+                  Eforturi de dezvoltare coordonată pentru construirea încrederii și coeziunii în echipă. Activități practice de cooperare și rezolvare de probleme în mediul natural.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="echipa" class="py-24 bg-cream-50">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-forest-950 mb-4">
+              Întâlnește Trotțul Nostru
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Noii noștri asistente de terapie și terapeuți calificati, împărtășind pasiunea pentru echilibru și vindecare.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift transition-all duration-300"
+            >
+              <div class="h-80 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1612681774021-c226eb14a29c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Terapeut uman"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-heading font-semibold text-forest-950 mb-1">
+                  Maria Popescu
+                </h3>
+                <p class="text-sand-900 mb-3">Funda, Pacem</p>
+                <p class="text-gray-600 text-sm">
+                  Terapeut specializat în tehnici de bază și cognitiv-comportamentale în asistența asistată de cai (CATT).
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift transition-all duration-300"
+            >
+              <div class="h-80 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1586363998577-d2576ebd9414?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Cal Trot"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-heading font-semibold text-forest-950 mb-1">
+                  Ben
+                </h3>
+                <p class="text-sand-900 mb-3">Liniștit și protector</p>
+                <p class="text-gray-600 text-sm">
+                  Certificat CAREGiver prin intermediul echipamentelor THRIVE. Promovează înduioșarea și echilibrul de sine.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-md hover-lift transition-all duration-300"
+            >
+              <div class="h-80 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1541899460891-233d6373cc2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Terapeut uman 2"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-heading font-semibold text-forest-950 mb-1">
+                  Andrei Dumitrescu
+                </h3>
+                <p class="text-sand-900 mb-3">Răbdător și înțelept</p>
+                <p class="text-gray-600 text-sm">
+                  Terapeut veterinar calificat în hipoterapie și abilități cognitive în specialitate. Cofondator al echipei noastre de fondator.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-24 bg-white">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-forest-950 mb-4">
+              Contactează-ne
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Suntem aici pentru a răspunde la întrebările tale și să ajutăm cu primul pas spre vindecare.
+            </p>
+          </div>
+
+          <div
+            class="bg-cream-50 rounded-3xl shadow-xl overflow-hidden lg:grid lg:grid-cols-2"
+          >
+            <div class="p-8 md:p-12">
+              <form class="space-y-6">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-gray-700 mb-2"
+                    >Numele complet</label
+                  ><input type="text" id="name" name="nume" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-forest-950 focus:border-transparent transition-all" required />
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700 mb-2"
+                    >Adresă de email</label
+                  ><input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-forest-950 focus:border-transparent transition-all" required />
+                </div>
+                <div>
+                  <label for="service" class="block text-sm font-medium text-gray-700 mb-2"
+                    >Serviciu de interes</label
+                  ><select id="service" name="serviciu" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-forest-950 focus:border-transparent transition-all">
+                    <option>Dezvoltare Personală Asistată de Cai</option>
+                    <option>Hipoterapie</option>
+                    <option>Teambuilding & Grupuri</option>
+                    <option>Altele</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="message" class="block text-sm font-medium text-gray-700 mb-2"
+                    >Mesaj</label
+                  ><textarea id="message" name="mesaj" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-forest-950 focus:border-transparent transition-all" required></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-forest-950 text-white px-6 py-3 rounded-lg hover:bg-forest-900 transition-colors font-medium"
+                >
+                  Trimite mesajul
+                </button>
+              </form>
+
+              <div class="mt-8 pt-8 border-t border-gray-200">
+                <h3 class="text-lg font-semibold text-forest-950 mb-4">Social Media</h3>
+                <div class="flex space-x-4">
+                  <a href="https://www.facebook.com/terapie.cai.echilibru" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-forest-950/10 rounded-full flex items-center justify-center hover:bg-forest-950/20 transition-colors">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="text-forest-950"
+                    >
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a href="https://www.instagram.com/terapie_echilibru" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-forest-950/10 rounded-full flex items-center justify-center hover:bg-forest-950/20 transition-colors">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="text-forest-950"
+                    >
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.263.148 4.971 1.691 5.12 5.12.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.429-2.009 5.12-5.12 5.27-1.265.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.971-1.841-5.12-5.12-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.584.07-4.849.149-3.263 1.91-4.971 5.12-5.12 1.265-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.359 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.361-.2 6.78-2.618 6.98-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.2-4.358-2.618-6.78-6.98-6.98zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.44-.645 1.44-1.44-.645-1.44-1.44-1.44z"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white p-8 md:p-12">
+              <h3 class="text-xl font-heading font-semibold text-forest-950 mb-6">
+                Informații de contact
+              </h3>
+
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-forest-950/10 rounded-full flex items-center justify-center mr-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" y="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-medium text-forest-950">Adresa</p>
+                    <p class="text-gray-600">Strada Principala 118, Lacu Turcului, Romania, 107043</p>
+                    <p class="text-gray-500 text-sm">Ploiești · București · Ilfov · Comuna Balta Doamnei, Prahova</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-forest-950/10 rounded-full flex items-center justify-center mr-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.39 2 2 0 0 1-.55-2L2 12a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2 0 0 0 2 2 0 0 0 2-2V8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2 0 0 0 2 2z"></path>
+                      <path d="M5 12v6"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-medium text-forest-950">Telefon</p>
+                    <p class="text-gray-600">+40 723 164 124</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-forest-950/10 rounded-full flex items-center justify-center mr-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-medium text-forest-950">Email</p>
+                    <p class="text-gray-600">terapie.echilibru@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8 rounded-lg overflow-hidden h-64 bg-gray-200">
+                <div class="w-full h-full flex items-center justify-center bg-cream-50">
+                  <div class="text-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" y="10" r="3"></circle>
+                    </svg>
+                    <p class="text-sm text-gray-600 mt-2">Harta interactivă - placeholder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-forest-950 text-white">
+        <div class="mx-auto max-w-7xl px-6 py-12">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0"
+          >
+            <div class="text-center md:text-left">
+              <p class="text-xl font-bold mb-2">ECHILIBRU</p>
+              <p class="text-cream-200 text-sm">
+                Echilibru și vindecare, în ritmul naturii.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-6">
+              <a href="#despre" class="hover:text-sand-400 transition-colors">Despre</a>
+              <a href="#servicii" class="hover:text-sand-400 transition-colors">Servicii</a>
+              <a href="#echipa" class="hover:text-sand-400 transition-colors">Echipa</a>
+              <a href="#contact" class="hover:text-sand-400 transition-colors">Contact</a>
+            </div>
+
+            <div class="text-center md:text-right">
+              <p class="text-cream-200 text-sm">&copy; 2026 Terapie ECHILIBRU. Toate drepturile rezervate.</p>
+              <p class="text-cream-200 text-sm mt-1">Un spațiu de siguranță și conexiune.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Închide meniul la click pe link (pentru dispozitive mobile)
+      document.querySelectorAll('#mobile-menu a').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    </script>
+  </body>
+</html>
