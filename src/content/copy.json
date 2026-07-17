@@ -75,26 +75,26 @@
     ]
   },
   "echipa": {
-    "sectionTitle": "Oameni si Cai",
-    "description": "Noii nostri asistente de terapie si terapeuti calificati, impartasind pasiunea pentru echilibru si vindecare.",
+    "sectionTitle": "Caii Noastri - Parteneri in Vindecare",
+    "description": "Trei cai exceptionali, fiecare cu personalitate unica, antrenati pentru a sustine vindecarea, cresterea si conectarea autentica.",
     "members": [
       {
-        "name": "Anca",
-        "role": "Psihoterapeut si Facilitator",
-        "description": "Terapeut specializat in tehnici de baza si cognitiv-comportamentale in asistenta asistata de cai (CATT).",
-        "imageAlt": "Terapeut uman"
+        "name": "Anabelle",
+        "role": "Specializata in gestionarea anxietatii si ancorare in prezent",
+        "description": "Inteleapta, inalta si incredibil de calma. Elegant, majestuoasa silueta. Ghideste pacientii spre siguranta interioara si prezent.",
+        "imageAlt": "Anabelle - Cal elegant si majestuos"
       },
       {
-        "name": "Cris",
-        "role": "Linistit si protector",
-        "description": "Certificat CAREGiver prin intermediul echipamentelor THRIVE. Promoveaza induiosarea si echilibrul de sine.",
-        "imageAlt": "Cal Trot"
+        "name": "Pony",
+        "role": "Perfect pentru copii, stimularea curajului si depasirea barierelor emotionale",
+        "description": "Curios, mic de statura si plin de rezilienta. Prietenos, accesibil, jucaus. Inspira curajul si Bucuria descoperirii la copii.",
+        "imageAlt": "Pony - Cal mic, prietenos si jucaus"
       },
       {
-        "name": "Andrei Dumitrescu",
-        "role": "Rabdator si intelept",
-        "description": "Terapeut veterinar calificat in hipoterapie si abilitati cognitive in specialitate. Cofondator al echipei noastre de fondator.",
-        "imageAlt": "Terapeut uman 2"
+        "name": "Aris",
+        "role": "Excelent pentru teambuilding-uri, citirea dinamicilor de grup si oglindirea emotiilor subtile",
+        "description": "Sensibil, compact si robust. Puternic, ancorat, inalt de comunicativ. Oglindeste dinamicile de grup si faciliteaza coeziunea.",
+        "imageAlt": "Aris - Cal puternic, ancorat si comunicativ"
       }
     ]
   },
@@ -170,7 +170,7 @@
         "label": "Contact"
       }
     ],
-    "copyright": "&copy; 2026 Terapie ECHILIBRU. Toate drepturile rezervate.",
+    "copyright": "© 2026 Terapie ECHILIBRU. Toate drepturile rezervate.",
     "tagline2": "Un spatiu de siguranta si conexiune."
   },
   "about": {

@@ -24,24 +24,39 @@ const socialPaths = {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(229, 231, 219, 1);
+      }
+      .hover-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+    </style>
   </head>
 
-  <body class="bg-cream-50 text-gray-700">
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass">
+  <body class="bg-cream-50 text-slate-700 font-sans antialiased leading-relaxed" style="font-size: 17px; line-height: 1.75;">
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md bg-white/70 border-b border-gray-100">
       <nav class="mx-auto max-w-7xl px-6 py-4">
         <div class="flex items-center justify-between">
           <a href="#" class="text-2xl font-bold text-forest-950">{copy.navigation.logo}</a>
 
           <div class="hidden md:flex items-center space-x-8">
             {copy.navigation.links.map(link => (
-              <a href={link.href} class="hover:text-sand-900 transition-colors">{link.label}</a>
+              <a href={link.href} class="font-sans text-sm font-medium hover:text-sand-900 transition-colors tracking-wide">{link.label}</a>
             ))}
             <a
               href="#"
-              class="bg-forest-950 text-white px-6 py-2 rounded-full hover:bg-forest-900 transition-colors"
+              class="bg-forest-950 text-white px-6 py-2 rounded-full hover:bg-forest-900 transition-colors font-sans font-semibold text-sm"
             >{copy.navigation.cta}</a>
           </div>
 
@@ -66,11 +81,11 @@ const socialPaths = {
 
         <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4">
           {copy.navigation.links.map(link => (
-            <a href={link.href} class="block hover:text-sand-900 transition-colors">{link.label}</a>
+            <a href={link.href} class="block font-sans text-sm font-medium hover:text-sand-900 transition-colors tracking-wide">{link.label}</a>
           ))}
           <a
             href="#"
-            class="block bg-forest-950 text-white px-6 py-2 rounded-full hover:bg-forest-900 transition-colors text-center"
+            class="block bg-forest-950 text-white px-6 py-2 rounded-full hover:bg-forest-900 transition-colors text-center font-sans font-semibold text-sm"
           >{copy.navigation.cta}</a>
         </div>
       </nav>
@@ -82,20 +97,20 @@ const socialPaths = {
         <div class="mx-auto max-w-7xl px-6 py-24 md:py-32 relative z-10">
           <div class="flex flex-col md:flex-row items-center gap-16">
             <div class="md:w-1/2">
-              <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-forest-950 mb-6 leading-tight">
+              <h1 class="font-serif font-bold text-forest-950 mb-6 leading-tight text-5xl sm:text-6xl lg:text-7xl clamp-text">
                 {copy.hero.headline}
               </h1>
-              <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+              <p class="font-sans font-medium text-slate-600 mb-8 leading-relaxed text-lg sm:text-xl tracking-wide">
                 {copy.hero.subheadline}
               </p>
               <div class="flex flex-col sm:flex-row gap-4">
                 <a
                   href="#servicii"
-                  class="bg-forest-950 text-white px-8 py-3 rounded-full hover:bg-forest-900 transition-colors text-center"
+                  class="bg-forest-950 text-white px-8 py-3 rounded-full hover:bg-forest-900 transition-colors text-center font-sans font-semibold"
                 >{copy.hero.ctaPrimary}</a>
                 <a
                   href="#contact"
-                  class="border-2 border-forest-950 text-forest-950 px-8 py-3 rounded-full hover:bg-forest-950 hover:text-white transition-colors text-center"
+                  class="border-2 border-forest-950 text-forest-950 px-8 py-3 rounded-full hover:bg-forest-950 hover:text-white transition-colors text-center font-sans font-semibold"
                 >{copy.hero.ctaSecondary}</a>
               </div>
             </div>
@@ -118,10 +133,10 @@ const socialPaths = {
       <section id="despre" class="py-24 bg-white">
         <div class="mx-auto max-w-7xl px-6">
           <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-forest-950 mb-4">
+            <h2 class="font-serif font-bold text-forest-950 mb-4 text-3xl sm:text-4xl lg:text-5xl tracking-tight">
               {copy.about.sectionTitle}
             </h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p class="font-sans text-slate-600 mb-4 max-w-2xl mx-auto text-lg sm:text-xl leading-relaxed">
               {copy.about.description}
             </p>
           </div>
@@ -135,13 +150,13 @@ const socialPaths = {
               />
             </div>
             <div>
-              <h3 class="text-2xl font-heading font-semibold text-forest-950 mb-4">
+              <h3 class="font-serif font-semibold text-forest-950 mb-4 text-2xl sm:text-3xl tracking-tight">
                 {copy.about.passionTitle}
               </h3>
-              <p class="text-gray-700 mb-4">
+              <p class="font-sans text-slate-700 mb-4 leading-relaxed text-lg">
                 {copy.about.passionText1}
               </p>
-              <p class="text-gray-700 mb-6">
+              <p class="font-sans text-slate-700 mb-6 leading-relaxed text-lg">
                 {copy.about.passionText2}
               </p>
               <div class="flex flex-wrap gap-4">
@@ -157,10 +172,10 @@ const socialPaths = {
       <section id="philosophy" class="py-24 bg-cream-50">
         <div class="mx-auto max-w-7xl px-6">
           <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-forest-950 mb-4">
+            <h2 class="font-serif font-bold text-forest-950 mb-4 text-3xl sm:text-4xl lg:text-5xl tracking-tight">
               {copy.philosophie.sectionTitle}
             </h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p class="font-sans text-slate-600 mb-4 max-w-2xl mx-auto text-lg sm:text-xl leading-relaxed">
               {copy.philosophie.description}
             </p>
           </div>
@@ -188,10 +203,10 @@ const socialPaths = {
                     )}
                   </svg>
                 </div>
-                <h3 class="text-xl font-heading font-semibold text-forest-950 mb-3">
+                <h3 class="text-xl font-heading font-semibold text-forest-950 mb-3 tracking-wide">
                   {value.title}
                 </h3>
-                <p class="text-gray-600">
+                <p class="text-gray-600 leading-relaxed">
                   {value.description}
                 </p>
               </div>
@@ -203,10 +218,10 @@ const socialPaths = {
       <section id="servicii" class="py-24 bg-white">
         <div class="mx-auto max-w-7xl px-6">
           <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-forest-950 mb-4">
+            <h2 class="font-serif font-bold text-forest-950 mb-4 text-3xl sm:text-4xl lg:text-5xl tracking-wide tracking-wide">
               {copy.servicii.sectionTitle}
             </h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p class="font-sans text-slate-600 mb-4 max-w-2xl mx-auto text-lg sm:text-xl leading-relaxed">
               {copy.servicii.description}
             </p>
           </div>
@@ -224,10 +239,10 @@ const socialPaths = {
                   />
                 </div>
                 <div class="p-8">
-                  <h3 class="text-xl font-heading font-semibold text-forest-950 mb-3">
+                  <h3 class="font-serif font-semibold text-forest-950 mb-3 text-xl tracking-tight">
                     {card.title}
                   </h3>
-                  <p class="text-gray-600">
+                  <p class="font-sans text-slate-600 leading-relaxed">
                     {card.description}
                   </p>
                 </div>
@@ -240,10 +255,10 @@ const socialPaths = {
       <section id="echipa" class="py-24 bg-cream-50">
         <div class="mx-auto max-w-7xl px-6">
           <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-forest-950 mb-4">
+<h2 class="font-serif font-bold text-forest-950 mb-4 text-3xl sm:text-4xl lg:text-5xl tracking-tight tracking-wide">
               {copy.echipa.sectionTitle}
             </h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p class="font-sans text-slate-600 mb-4 max-w-2xl mx-auto leading-relaxed">
               {copy.echipa.description}
             </p>
           </div>
@@ -261,11 +276,11 @@ const socialPaths = {
                   />
                 </div>
                 <div class="p-6">
-                  <h3 class="text-xl font-heading font-semibold text-forest-950 mb-1">
+                  <h3 class="font-serif font-semibold text-forest-950 mb-1 text-xl tracking-tight">
                     {member.name}
                   </h3>
-                  <p class="text-sand-900 mb-3">{member.role}</p>
-                  <p class="text-gray-600 text-sm">
+                  <p class="text-sand-900 mb-3 font-sans font-medium text-sm tracking-wide uppercase">{member.role}</p>
+                  <p class="font-sans text-slate-600 text-sm leading-relaxed">
                     {member.description}
                   </p>
                 </div>
@@ -278,10 +293,10 @@ const socialPaths = {
       <section id="contact" class="py-24 bg-white">
         <div class="mx-auto max-w-7xl px-6">
           <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-forest-950 mb-4">
+<h2 class="font-serif font-bold text-forest-950 mb-4 text-3xl sm:text-4xl lg:text-5xl tracking-tight tracking-wide">
               {copy.contact.sectionTitle}
             </h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p class="font-sans text-slate-600 mb-4 max-w-2xl mx-auto leading-relaxed">
               {copy.contact.description}
             </p>
           </div>
@@ -324,7 +339,7 @@ const socialPaths = {
               </form>
 
               <div class="mt-8 pt-8 border-t border-gray-200">
-                <h3 class="text-lg font-semibold text-forest-950 mb-4">{copy.contact.socialMedia.title}</h3>
+                <h3 class="font-serif font-semibold text-forest-950 mb-6 text-xl tracking-wide">{copy.contact.socialMedia.title}</h3>
                 <div class="flex space-x-4">
                   {copy.contact.socialMedia.links.map(social => (
                     <a href={social.url} target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-forest-950/10 rounded-full flex items-center justify-center hover:bg-forest-950/20 transition-colors">
@@ -350,9 +365,7 @@ const socialPaths = {
             </div>
 
             <div class="bg-white p-8 md:p-12">
-              <h3 class="text-xl font-heading font-semibold text-forest-950 mb-6">
-                {copy.contact.info.title}
-              </h3>
+              <h3 class="font-serif font-semibold text-forest-950 mb-6 text-xl tracking-wide">{copy.contact.info.title}</h3>
 
               <div class="space-y-6">
                 <div class="flex items-start">
@@ -449,21 +462,21 @@ const socialPaths = {
             class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0"
           >
             <div class="text-center md:text-left">
-              <p class="text-xl font-bold mb-2">{copy.footer.logo}</p>
-              <p class="text-cream-200 text-sm">
+              <p class="font-serif font-bold text-xl mb-2">{copy.footer.logo}</p>
+              <p class="text-cream-200 font-sans text-sm leading-relaxed">
                 {copy.footer.tagline}
               </p>
             </div>
 
             <div class="flex flex-wrap justify-center gap-6">
               {copy.footer.links.map(link => (
-                <a href={link.href} class="hover:text-sand-400 transition-colors">{link.label}</a>
+                <a href={link.href} class="font-sans text-sm hover:text-sand-400 transition-colors tracking-wide">{link.label}</a>
               ))}
             </div>
 
             <div class="text-center md:text-right">
-              <p class="text-cream-200 text-sm">{copy.footer.copyright}</p>
-              <p class="text-cream-200 text-sm mt-1">{copy.footer.tagline2}</p>
+              <p class="text-cream-200 font-sans text-sm">{copy.footer.copyright}</p>
+              <p class="text-cream-200 font-sans text-sm mt-1">{copy.footer.tagline2}</p>
             </div>
           </div>
         </div>
