@@ -1,0 +1,73 @@
+---
+import copy from '../content/copy.json';
+
+interface Props {
+  navigation?: typeof copy.navigation;
+}
+
+const { navigation = copy.navigation } = Astro.props;
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass">
+  <nav class="mx-auto max-w-7xl px-6 py-4">
+    <div class="flex items-center justify-between">
+      <a href="#" class="text-2xl font-serif font-bold text-forest-950 hover:text-sand-900 transition-colors tracking-tight">{navigation.logo}</a>
+
+      <div class="hidden md:flex items-center space-x-8">
+        {navigation.links.map(link => (
+          <a href={link.href} class="font-sans text-xs font-medium hover:text-sand-900 transition-colors tracking-widest uppercase">{link.label}</a>
+        ))}
+        <a
+          href="#contact"
+          class="bg-forest-950 text-white px-5 py-2.5 rounded-full hover:bg-forest-900 hover:scale-[1.02] active:scale-[0.98] transition-all font-sans font-bold text-xs uppercase tracking-wider"
+        >{navigation.cta}</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden text-forest-950 focus:outline-none" aria-label="Toggle menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 pb-4">
+      {navigation.links.map(link => (
+        <a href={link.href} class="block font-sans text-xs font-medium hover:text-sand-900 transition-colors tracking-widest uppercase">{link.label}</a>
+      ))}
+      <a
+        href="#contact"
+        class="block bg-forest-950 text-white px-5 py-2.5 rounded-full hover:bg-forest-900 hover:scale-[1.02] active:scale-[0.98] transition-all text-center font-sans font-bold text-xs uppercase tracking-wider"
+      >{navigation.cta}</a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('#mobile-menu a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  }
+</script>

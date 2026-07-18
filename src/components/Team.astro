@@ -1,0 +1,72 @@
+---
+import copy from '../content/copy.json';
+
+interface Props {
+  echipa?: typeof copy.echipa;
+}
+
+const { echipa = copy.echipa } = Astro.props;
+
+// Unique, high-quality local images matching the descriptions of Anabelle, Pony, and Aris
+const memberImages = [
+  // Anabelle: Tall, white/light grey elegant horse
+  '/assets/images/team-anabelle.jpg',
+  // Pony: Cute, friendly pony or small horse
+  '/assets/images/team-pony.jpg',
+  // Aris: Powerful, communicative brown/dark horse
+  '/assets/images/team-aris.jpg'
+];
+
+// Special trait badges overlay for each equine partner
+const traits = [
+  "Calm & Înțelepciune",
+  "Curaj & Bucurie",
+  "Sensibilitate & Oglindire"
+];
+---
+
+<section id="echipa" class="py-24 bg-cream-50 relative overflow-hidden">
+  <div class="mx-auto max-w-7xl px-6 relative z-10">
+    <div class="text-center mb-20 reveal">
+      <span class="text-sand-900 font-sans text-xs font-bold tracking-[0.2em] uppercase mb-3 block">{copy.navigation.links[2].label}</span>
+      <h2 class="font-serif font-bold text-forest-950 mb-6 text-3xl sm:text-4xl lg:text-5xl tracking-tight">
+        {echipa.sectionTitle}
+      </h2>
+      <div class="w-16 h-[2px] bg-sand-900 mx-auto mb-6"></div>
+      <p class="font-sans text-slate-600 mb-4 max-w-2xl mx-auto text-lg leading-relaxed">
+        {echipa.description}
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {echipa.members.map((member, idx) => (
+        <div
+          class="bg-white rounded-3xl overflow-hidden shadow-sm hover-lift transition-all duration-300 flex flex-col h-full reveal group border border-slate-100/50"
+          style={`transition-delay: ${idx * 150}ms`}
+        >
+          <div class="h-80 overflow-hidden relative">
+            <!-- Glassmorphism trait overlay badge -->
+            <div class="absolute top-4 left-4 z-20 bg-white/75 backdrop-blur-md px-3.5 py-1.5 rounded-full text-[10px] font-bold text-forest-950 shadow-sm border border-white/20 uppercase tracking-widest">
+              {traits[idx]}
+            </div>
+            <div class="absolute inset-0 bg-forest-950/5 z-10 transition-opacity duration-300 group-hover:opacity-0"></div>
+            <img
+              src={memberImages[idx] || memberImages[0]}
+              alt={member.imageAlt}
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <h3 class="font-serif font-bold text-forest-950 mb-1 text-xl tracking-tight transition-colors duration-300 group-hover:text-sand-900">
+              {member.name}
+            </h3>
+            <p class="text-sand-900 mb-4 font-sans font-semibold text-xs tracking-wider uppercase">{member.role}</p>
+            <p class="font-sans text-slate-500 text-sm leading-relaxed flex-grow">
+              {member.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

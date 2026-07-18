@@ -1,0 +1,159 @@
+---
+import copy from '../content/copy.json';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = copy.seo.title, 
+  description = copy.seo.description 
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | Terapie ECHILIBRU</title>
+    <meta name="description" content={description} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style is:global>
+      /* Smooth scrolling adjustment for fixed header */
+      section {
+        scroll-margin-top: 80px;
+      }
+
+      /* Custom Premium Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #faf8f5;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #14342b;
+        border-radius: 5px;
+        border: 2px solid #faf8f5;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #2d4039;
+      }
+
+      /* Glassmorphism Header */
+      .glass {
+        background: rgba(250, 248, 245, 0.75);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(227, 235, 233, 0.8);
+      }
+
+      /* Interactive Hover-Lift Cards */
+      .hover-lift {
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .hover-lift:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px -15px rgba(20, 52, 43, 0.15);
+      }
+
+      /* Floating Animation */
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      /* Scroll Reveal Animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: transform, opacity;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Responsive Font Clamp Helper */
+      .clamp-text {
+        font-size: clamp(2.25rem, 5vw + 1rem, 4.5rem);
+      }
+
+      /* Custom button shadows and interactive transitions */
+      .btn-transition {
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .btn-transition:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px -6px rgba(20, 52, 43, 0.25);
+      }
+    </style>
+  </head>
+
+  <body class="bg-cream-50 text-slate-700 font-sans antialiased leading-relaxed" style="font-size: 17px; line-height: 1.75;">
+    <!-- Scroll Progress Indicator -->
+    <div class="fixed top-0 left-0 w-full h-1 z-[60] bg-cream-100">
+      <div id="scroll-progress" class="h-full bg-sand-900 w-0 transition-all duration-75"></div>
+    </div>
+
+    <slot />
+
+    <script>
+      // Intersection Observer for viewport scroll animation
+      const observeElements = () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              // Optionally unobserve after transition ends
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -60px 0px'
+        });
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+          observer.observe(el);
+        });
+      };
+
+      // Progress bar tracking scroll position
+      const trackScrollProgress = () => {
+        const progress = document.getElementById('scroll-progress');
+        if (progress) {
+          window.addEventListener('scroll', () => {
+            const winScroll = document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            progress.style.width = `${scrolled}%`;
+          }, { passive: true });
+        }
+      };
+
+      // Initialize
+      document.addEventListener('DOMContentLoaded', () => {
+        observeElements();
+        trackScrollProgress();
+      });
+    </script>
+  </body>
+</html>
