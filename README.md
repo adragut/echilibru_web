@@ -13,8 +13,8 @@ The site is built as a static single-page application (SPA) and can be deployed 
 | Category | Technology | Version |
 |----------|------------|---------|
 | **Framework** | [Astro](https://astro.build) | 5.x |
-| **Styling** | [Tailwind CSS](https://tailwindcss.com) | 3.4.x |
-| **Integration** | [@astrojs/tailwind](https://github.com/astrojs/tailwind) | 5.x |
+| **Styling** | Vanilla CSS (custom) | - |
+| **Integration** | None (plain Astro) | - |
 | **Language** | TypeScript / Astro Components | - |
 | **Fonts** | Google Fonts (Inter, Playfair Display) | - |
 | **Icons** | Inline SVG (Lucide-style) | - |

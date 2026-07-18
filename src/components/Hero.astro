@@ -1,5 +1,6 @@
 ---
 import copy from '../content/copy.json';
+import assets from '../content/assets.json';
 
 interface Props {
   hero?: typeof copy.hero;
@@ -44,14 +45,14 @@ const formattedHeadline = hero.headline
           
           <!-- Main background image (pasture landscape) -->
           <img
-            src="/assets/images/hero.jpg"
+            src={assets.hero}
             alt={hero.imageAlt}
             class="relative w-[85%] h-[300px] sm:h-[400px] lg:h-[460px] rounded-[2rem] shadow-xl object-cover border border-white/50 z-10 hover:scale-[1.01] transition-transform duration-500"
           />
 
           <!-- Secondary foreground image (petting close-up) -->
           <img
-            src="/assets/images/hero-secondary.jpg"
+            src={assets.heroSecondary}
             alt="Conexiune cu calul"
             class="absolute bottom-4 left-4 w-[50%] h-[160px] sm:h-[220px] lg:h-[260px] rounded-3xl object-cover shadow-2xl border-8 border-cream-50 z-20 hover:scale-105 hover:rotate-2 transition-all duration-500 cursor-pointer"
           />

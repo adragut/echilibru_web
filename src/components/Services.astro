@@ -1,5 +1,6 @@
 ---
 import copy from '../content/copy.json';
+import assets from '../content/assets.json';
 
 interface Props {
   servicii?: typeof copy.servicii;
@@ -7,14 +8,10 @@ interface Props {
 
 const { servicii = copy.servicii } = Astro.props;
 
-// High-quality, distinct local images corresponding to each service card index
 const serviceImages = [
-  // Dezvoltare Personala Asistata de Cai: Person petting a horse, connecting
-  '/assets/images/service-dezvoltare.jpg',
-  // Hipoterapie: Child/adult on a horse with therapist/assistance
-  '/assets/images/service-hipoterapie.jpg',
-  // Teambuilding & Grupuri: Group of horses or outdoor team activity in nature
-  '/assets/images/service-teambuilding.jpg'
+  assets.serviceDezvoltare,
+  assets.serviceHipoterapie,
+  assets.serviceTeambuilding
 ];
 ---
 

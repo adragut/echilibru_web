@@ -1,5 +1,6 @@
 ---
 import copy from '../content/copy.json';
+import assets from '../content/assets.json';
 
 interface Props {
   echipa?: typeof copy.echipa;
@@ -9,12 +10,16 @@ const { echipa = copy.echipa } = Astro.props;
 
 // Unique, high-quality local images matching the descriptions of Anabelle, Pony, and Aris
 const memberImages = [
-  // Anabelle: Tall, white/light grey elegant horse
-  '/assets/images/team-anabelle.jpg',
-  // Pony: Cute, friendly pony or small horse
-  '/assets/images/team-pony.jpg',
-  // Aris: Powerful, communicative brown/dark horse
-  '/assets/images/team-aris.jpg'
+  assets.teamAnabelle,
+  assets.teamPony,
+  assets.teamAris,
+  assets.teamCappuchino,
+  assets.teamCioco,
+  assets.teamArgo,
+  assets.teamYuki,
+  assets.teamScoty,
+  assets.teamName1,
+  assets.teamName2
 ];
 
 // Special trait badges overlay for each equine partner
@@ -38,10 +43,10 @@ const traits = [
       </p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-3 gap-8" id="team-grid">
       {echipa.members.map((member, idx) => (
         <div
-          class="bg-white rounded-3xl overflow-hidden shadow-sm hover-lift transition-all duration-300 flex flex-col h-full reveal group border border-slate-100/50"
+          class="bg-white rounded-3xl overflow-hidden shadow-sm hover-lift transition-all duration-300 flex flex-col h-full reveal group border border-slate-100/50 team-card"
           style={`transition-delay: ${idx * 150}ms`}
         >
           <div class="h-80 overflow-hidden relative">
@@ -68,5 +73,24 @@ const traits = [
         </div>
       ))}
     </div>
+    <button id="team-see-all" class="mt-12 mx-auto block px-8 py-3 bg-forest-950 text-white rounded-full font-sans font-semibold hover:bg-forest-800 transition-colors" type="button">Vezi toată echipa</button>
   </div>
 </section>
+
+<script>
+  const grid = document.getElementById('team-grid');
+  const cards = grid ? grid.querySelectorAll('.team-card') : [];
+  const button = document.getElementById('team-see-all');
+  
+  // Hide cards beyond the first 3 initially
+  cards.forEach((card, i) => {
+    if (i >= 3) card.classList.add('hidden');
+  });
+  
+  if (button) {
+    button.addEventListener('click', () => {
+      cards.forEach(card => card.classList.remove('hidden'));
+      button.style.display = 'none';
+    });
+  }
+</script>

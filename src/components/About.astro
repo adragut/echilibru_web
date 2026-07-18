@@ -1,5 +1,6 @@
 ---
 import copy from '../content/copy.json';
+import assets from '../content/assets.json';
 
 interface Props {
   about?: typeof copy.about;
@@ -26,7 +27,7 @@ const { about = copy.about } = Astro.props;
         <!-- Floating offset backdrop card -->
         <div class="absolute -inset-3 bg-sand-900/10 rounded-3xl transform -rotate-2"></div>
         <img
-          src="/assets/images/about.jpg"
+          src={assets.about}
           alt={about.imageAlt}
           class="relative rounded-3xl shadow-2xl object-cover w-full h-[380px] border border-slate-100/50 hover:scale-[1.02] transition-transform duration-500"
         />

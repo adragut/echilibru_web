@@ -1,0 +1,18 @@
+{
+  "hero": "/assets/images/kekes 3.jpg",
+  "heroSecondary": "/assets/images/aris3.jpg",
+  "about": "/assets/images/kekes.jpg",
+  "serviceDezvoltare": "/assets/images/grup2.jpg",
+  "serviceHipoterapie": "/assets/images/aris2.jpg",
+  "serviceTeambuilding": "/assets/images/grup.jpg",
+  "teamAnabelle": "/assets/images/team-anabelle.jpg",
+  "teamPony": "/assets/images/team-pony.jpg",
+  "teamAris": "/assets/images/team-aris.jpg",
+  "teamCappuchino": "/assets/images/team-cappuchino.jpg",
+  "teamCioco": "/assets/images/team-cioco.jpg",
+  "teamArgo": "/assets/images/team-argo.jpg",
+  "teamYuki": "/assets/images/team-yuki.jpg",
+  "teamScoty": "/assets/images/team-scoty.jpg",
+  "teamName1": "/assets/images/team-name1.jpg",
+  "teamName2": "/assets/images/team-name2.jpg"
+}
