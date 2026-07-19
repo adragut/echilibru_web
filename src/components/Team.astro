@@ -22,12 +22,13 @@ const memberImages = [
   assets.teamName2
 ];
 
-// Special trait badges overlay for each equine partner
-const traits = [
-  "Calm & Înțelepciune",
-  "Curaj & Bucurie",
-  "Sensibilitate & Oglindire"
-];
+const getSpecialTrait = (member: (typeof echipa.members)[number]) => {
+  if ('specialTrait' in member && typeof member.specialTrait === 'string' && member.specialTrait.trim()) {
+    return member.specialTrait;
+  }
+
+  return member.description.split(/[.,;]/)[0].trim();
+};
 ---
 
 <section id="echipa" class="py-24 bg-cream-50 relative overflow-hidden">
@@ -51,8 +52,8 @@ const traits = [
         >
           <div class="h-80 overflow-hidden relative">
             <!-- Glassmorphism trait overlay badge -->
-            <div class="absolute top-4 left-4 z-20 bg-white/75 backdrop-blur-md px-3.5 py-1.5 rounded-full text-[10px] font-bold text-forest-950 shadow-sm border border-white/20 uppercase tracking-widest">
-              {traits[idx]}
+            <div class="absolute top-4 left-4 z-20 max-w-[calc(100%-2rem)] bg-white/80 backdrop-blur-md px-3.5 py-1.5 rounded-full text-[10px] font-bold text-forest-950 shadow-sm border border-white/30 uppercase tracking-widest leading-tight">
+              {getSpecialTrait(member)}
             </div>
             <div class="absolute inset-0 bg-forest-950/5 z-10 transition-opacity duration-300 group-hover:opacity-0"></div>
             <img
