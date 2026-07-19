@@ -34,67 +34,97 @@
   },
   "philosophie": {
     "sectionTitle": "Filosofia Noastra",
-    "description": "Puterea vindecatoare a caiilor se bazeaza pe prezenta lor non-judecatoare si asupra abilitatii lor de a reflecta starea noastra emotionala.",
+    "description": "Credem in puterea transformatoare a conexiunii dintre om si cal, o relatie ghidata de prezenta non-judecatoare si de abilitatea nativa a cailor de a ne oglindi emotiile autentice.",
     "values": [
       {
-        "title": "Acceptare",
-        "description": "Caiii reflecta pur si simplu starea noastra emotionala interiora fara a judeca, creand un spatiu sigur pentru expunere autentica.",
+        "title": "Acceptare Neconditionata",
+        "description": "Caii nu judeca si nu pun etichete; ei raspund doar la adevarul tau interior, oferind un spatiu de siguranta deplina in care te poti exprima exact asa cum esti.",
         "icon": "users"
       },
       {
-        "title": "Ancorare Emotionala",
-        "description": "Prezenta calului ajuta la conectarea cu sentimentele noastre interioare profunde, facilitand procese de vindecare autentica.",
+        "title": "Ancorare si Prezenta",
+        "description": "In preajma calului, trecutul si viitorul dispar. Interactionand cu el, inveti sa te conectezi cu momentul prezent, sa iti gestionezi emotiile si sa iti regasesti linistea.",
         "icon": "sun"
       },
       {
-        "title": "Recuperare Fizica",
-        "description": "Munca echilibrata si ritmicitate pentru imbunatatirea posturii, tonusului muscular si coordonarii neuromotore.",
+        "title": "Armonie si Recuperare",
+        "description": "Miscarea calului are un ritm terapeutic unic care stimuleaza corpul si mintea in egala masura, imbunatatind postura, echilibrul fizic si tonusul muscular.",
         "icon": "heart"
       }
     ]
   },
   "servicii": {
     "sectionTitle": "Serviciile Noastre",
-    "description": "Oferim terapii specializate adaptate nevoilor fiecarui individ sau grup.",
+    "description": "Programe terapeutice si de dezvoltare concepute pentru a transforma interactiunea cu caii in pasi concreti catre echilibru emotional si fizic.",
     "cards": [
       {
         "title": "Dezvoltare Personala Asistata de Cai",
-        "description": "Focus pe cresterea increderii in sine, autocunoastere si dezvoltare personala prin interactiunea cu caii docili, in acel spatiu sigur pentru explorare personala autentica.",
-        "imageAlt": "Zana asistata de cai"
+        "description": "O calatorie spre autocunoastere, gestionarea anxietatii si prezenta constienta. Intr-un spatiu sigur si natural, caii devin oglinzi fidele ale emotiilor tale, ajutandu-te sa iti regasesti increderea si linistea interioara.",
+        "imageAlt": "Sesiune de dezvoltare personala in natura, evidentiind conexiunea profunda dintre om si cal"
       },
       {
-        "title": "Hipoterapie",
-        "description": "Specializata in corectia posturii, tonifierea musculara si recuperare neuromotorie. Exercitii terapeutice asistate de cai pentru rezultate fizice measurabile.",
-        "imageAlt": "Hipoterapie"
+        "title": "Hipoterapie & Recuperare",
+        "description": "Terapie prin miscare dedicata imbunatatirii posturii, tonifierii musculare si recuperarii neuromotorii. Mersul tridimensional al calului stimuleaza reflexele corpului, oferind beneficii fizice vizibile si o stare de relaxare profunda.",
+        "imageAlt": "Copil intins relaxat pe spatele unui cal in timpul unei sedinte ghidate de hipoterapie"
       },
       {
-        "title": "Teambuilding & Grupuri",
-        "description": "Eforturi de dezvoltare coordonata pentru construirea increderii si coeziunii in echipa. Activitati practice de cooperare si rezolvare de probleme in mediul natural.",
-        "imageAlt": "Echipa in pasune"
+        "title": "Teambuilding & Dinamici de Grup",
+        "description": "Experiente inedite in aer liber pentru echipe care vor sa isi testeze comunicarea, leadership-ul si coeziunea. Caii reactioneaza instant la energia grupului, transformand exercitiile practice intr-o lectie autentica de cooperare.",
+        "imageAlt": "Activitate de grup si interactiune cu caii in manej pentru construirea increderii in echipa"
       }
     ]
   },
   "echipa": {
     "sectionTitle": "Caii Noastri - Parteneri in Vindecare",
-    "description": "Trei cai exceptionali, fiecare cu personalitate unica, antrenati pentru a sustine vindecarea, cresterea si conectarea autentica.",
+    "description": "O echipa formata din cai exceptionali, fiecare cu o personalitate unica si farmec propriu, pregatiti sa iti ofere sprijin, echilibru si momente de conectare autentica.",
     "members": [
       {
         "name": "Anabelle",
-        "role": "Specializata in gestionarea anxietatii si ancorare in prezent",
-        "description": "Inteleapta, inalta si incredibil de calma. Elegant, majestuoasa silueta. Ghideste pacientii spre siguranta interioara si prezent.",
-        "imageAlt": "Anabelle - Cal elegant si majestuos"
+        "role": "Sefa suprema a intelepciunii si experta in ignorat dramele din grajd",
+        "description": "Fiind cea mai in varsta, le-a vazut deja pe toate si nimic nu o mai surprinde, avand rabdarea de fier a unui bunic. Zvelta, eleganta si cu o blana murga stralucitoare, ea patruleaza pe camp cu aerul unui manager senior care stie ca totul depinde de ea.",
+        "imageAlt": "Anabelle - Cal murg, inalt si elegant, purtand cu calm o tanara calareata pe un camp deschis sub un cer cu nori spectaculosi"
       },
       {
         "name": "Pony",
-        "role": "Perfect pentru copii, stimularea curajului si depasirea barierelor emotionale",
-        "description": "Curios, mic de statura si plin de rezilienta. Prietenos, accesibil, jucaus. Inspira curajul si Bucuria descoperirii la copii.",
-        "imageAlt": "Pony - Cal mic, prietenos si jucaus"
+        "role": "Director executiv de mangieri pe bot si cersit recompense",
+        "description": "Desi numele lui nu lasa loc de mistere legate de statura, Pony compenseaza prin carisma pura si o blana alba cu picatele gri. Este specialistul nostru in topit inimile copiilor, avand o tehnica impecabila de a poza in cel mai bun prieten din lume pentru o recompensa.",
+        "imageAlt": "Pony - Cal mic de culoare alba cu picatele gri, primind cu blandete o mangiere pe bot de la un copilas cu palarie colorata"
       },
       {
         "name": "Aris",
-        "role": "Excelent pentru teambuilding-uri, citirea dinamicilor de grup si oglindirea emotiilor subtile",
-        "description": "Sensibil, compact si robust. Puternic, ancorat, inalt de comunicativ. Oglindeste dinamicile de grup si faciliteaza coeziunea.",
-        "imageAlt": "Aris - Cal puternic, ancorat si comunicativ"
+        "role": "Model profesionist de selfie-uri si specialist in mirosit buzunare",
+        "description": "Aris este definitia calului fotogenic, gata oricand sa bage capul in poza cu o freza rebela si o coama neagra de rocker. Fie ca apropie bland botul de degetele unui copil sau ca fura prim-planul intr-un selfie, el stie sigur ca este vedeta grajdului.",
+        "imageAlt": "Aris - Cal maro cu coama neagra si bogata, surprins de aproape intr-un selfie amuzant alaturi de un barbat si interactionand bland cu un copil"
+      },
+      {
+        "name": "Cappuchino",
+        "role": "Saltea ortopedica premium si expert in somnoterapie",
+        "description": "Cu blana lui de culoarea cafelei cu lapte si o coama blonda ca de revista, Cappuchino este definitia calmului absolut. Este atat de tolerant si relaxat incat copiii il folosesc deseori pe post de pat confortabil pentru un pui de somn in timpul sedintelor.",
+        "imageAlt": "Cappuchino - Cal de culoare roib-deschis cu coama blonda si o dunga alba pe fata, stand linistit in timp ce un copil este intins pe spatele lui intr-o sesiune de terapie"
+      },
+      {
+        "name": "Cioco",
+        "role": "Stilist profesionist si maestru de ceremonii la intampinarea oaspetilor",
+        "description": "Cioco este ciocolata noastra cu personalitate efervescenta si o coama impletita elegant, gata parca sa apara pe covorul rosu. Este genul de cal politicos care stie sa faca o intrare memorabila, ridicand piciorul ca intr-o reverenta gratioasa pentru a-si saluta vizitatorii.",
+        "imageAlt": "Cioco - Cal murg inchis cu coama impletita in codite, ridicand un picior din fata ca intr-un salut catre un copil si o femeie"
+      },
+      {
+        "name": "Argo",
+        "role": "Print arab cu origini nobile si expert in mers elegant la pas",
+        "description": "Argo este pur sangele nostru arab, un cal alb cu o alura atletica si o eleganta innascuta care atrage toate privirile. Are acel aer mandru specific rasei, dar il foloseste exclusiv pentru a impresiona calaretii si pentru a poza impecabil in manej.",
+        "imageAlt": "Argo - Cal arab de culoare alba, cu alura zvelta si eleganta, purtand cu gratie o calareata in manej in timpul unei sedinte de echitatie"
+      },
+      {
+        "name": "Yuki",
+        "role": "Junior de perspectiva si responsabil cu energia tineresca a grupului",
+        "description": "Fiind cel mai tanar din echipa, Yuki aduce acel vibe proaspat si curios prin blana lui baltata si coama bicolora absolut unica. Desi este inca la inceput de drum si invata secretele meseriei, farmecul lui nativ il face deja favoritul tuturor.",
+        "imageAlt": "Yuki - Cal tanar si robust cu blana baltata in pete albe si maro, avand o coama bicolora, stand in picioare pe o alee pavata"
+      },
+      {
+        "name": "Scoty",
+        "role": "Suflet de artist si campion la oferit afectiune pura",
+        "description": "Scoty este un Gypsy Vanner superb, cu o personalitate incredibil de blanda, blana baltata si o coama lunga si deschisa la culoare. Este un cal extrem de afectuos care adora interactiunea umana, fiind mereu gata sa ofere alinare si caldura celor din jur.",
+        "imageAlt": "Scoty - Cal Gypsy Vanner cu blana baltata alb-negru si coama lunga si blonda, primind cu blandete un sarut pe frunte de la un barbat cu barba si caciula"
       }
     ]
   },

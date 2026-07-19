@@ -11,7 +11,7 @@ const { hero = copy.hero } = Astro.props;
 // Dynamically highlights keywords with elegant brand colors
 const formattedHeadline = hero.headline
   .replace('Echilibru', '<span class="text-sand-900 drop-shadow-sm font-semibold">Echilibru</span>')
-  .replace('vindecare', '<span class="text-forest-600 italic font-normal font-serif">vindecare</span>');
+  .replace('vindecare', '<span style="color: #0092B1;" class="italic font-normal font-serif">vindecare</span>');
 ---
 
 <section id="hero" class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-gradient-to-b from-cream-100/40 via-cream-50 to-cream-50">

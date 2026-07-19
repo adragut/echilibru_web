@@ -21,7 +21,8 @@ const {
     <meta name="description" content={description} />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/styles/theme.css" />
+    <link rel="icon" type="image/png" href="/assets/images/logo.png" />
 
     <!-- Google Fonts: Inter & Playfair Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -156,4 +157,10 @@ const {
       });
     </script>
   </body>
+  <script>
+    // Dark‑mode toggle based on OS preference
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.dataset.theme = 'dark';
+    }
+  </script>
 </html>

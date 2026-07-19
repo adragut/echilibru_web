@@ -81,16 +81,20 @@ const traits = [
   const grid = document.getElementById('team-grid');
   const cards = grid ? grid.querySelectorAll('.team-card') : [];
   const button = document.getElementById('team-see-all');
-  
-  // Hide cards beyond the first 3 initially
-  cards.forEach((card, i) => {
-    if (i >= 3) card.classList.add('hidden');
-  });
-  
+
+  let expanded = false;
+  function updateView() {
+    cards.forEach((card, i) => {
+      card.style.display = (expanded || i < 3) ? 'block' : 'none';
+    });
+    button.textContent = expanded ? 'Vezi mai puține' : 'Vezi toată echipa';
+  }
+  updateView();
+
   if (button) {
     button.addEventListener('click', () => {
-      cards.forEach(card => card.classList.remove('hidden'));
-      button.style.display = 'none';
+      expanded = !expanded;
+      updateView();
     });
   }
 </script>
