@@ -2,7 +2,7 @@
   "hero": "/assets/images/kekes 3.jpg",
   "heroSecondary": "/assets/images/aris3.jpg",
   "about": "/assets/images/kekes.jpg",
-  "logo": "/assets/images/logo.png",
+  "logo": "/assets/images/logo_echilibru.png",
   "serviceDezvoltare": "/assets/images/grup2.jpg",
   "serviceHipoterapie": "/assets/images/aris2.jpg",
   "serviceTeambuilding": "/assets/images/grup.jpg",
@@ -14,6 +14,6 @@
   "teamArgo": "/assets/images/Argo.jpg",
   "teamYuki": "/assets/images/yuki.jpg",
   "teamScoty": "/assets/images/Scoty.jpg",
-  "teamName1": "/assets/images/team-name1.jpg",
-  "teamName2": "/assets/images/team-name2.jpg"
+  "teamRia": "/assets/images/team_ria.jpg",
+  "teamOnyx": "/assets/images/onyx.jpg"
 }

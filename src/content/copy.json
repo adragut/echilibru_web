@@ -58,9 +58,9 @@
     "description": "Programe terapeutice si de dezvoltare concepute pentru a transforma interactiunea cu caii in pasi concreti catre echilibru emotional si fizic.",
     "cards": [
       {
-        "title": "Dezvoltare Personala Asistata de Cai",
-        "description": "O calatorie spre autocunoastere, gestionarea anxietatii si prezenta constienta. Intr-un spatiu sigur si natural, caii devin oglinzi fidele ale emotiilor tale, ajutandu-te sa iti regasesti increderea si linistea interioara.",
-        "imageAlt": "Sesiune de dezvoltare personala in natura, evidentiind conexiunea profunda dintre om si cal"
+        "title": "Initiere in Echitatie",
+        "description": "Descopera magia calariei de la primii pasi. Inveti bazele interactiunii cu calul, postura corecta in sa si tehnicile esentiale de control, totul sub indrumarea atenta a unui instructor dedicat, intr-un mediu sigur si primitor.",
+        "imageAlt": "Lectie de initiere in calarie cu instructor, aratand un cursant incepator pe cal intr-un manej"
       },
       {
         "title": "Hipoterapie & Recuperare",
@@ -117,14 +117,14 @@
         "name": "Argo",
         "role": "Print arab cu origini nobile si expert in mers elegant la pas",
         "specialTrait": "Eleganta nobila",
-        "description": "Argo este pur sangele nostru arab, un cal alb cu o alura atletica si o eleganta innascuta care atrage toate privirile. Are acel aer mandru specific rasei, dar il foloseste exclusiv pentru a impresiona calaretii si pentru a poza impecabil in manej.",
+        "description": "Argo este pur sangele nostru arab, un cal alb cu o alura atletica si o eleganta innascuta care atrage toate privirile. Have acel aer mandru specific rasei, dar il foloseste exclusiv pentru a impresiona calaretii si pentru a poza impecabil in manej.",
         "imageAlt": "Argo - Cal arab de culoare alba, cu alura zvelta si eleganta, purtand cu gratie o calareata in manej in timpul unei sedinte de echitatie"
       },
       {
         "name": "Yuki",
         "role": "Junior de perspectiva si responsabil cu energia tineresca a grupului",
         "specialTrait": "Curiozitate tanara",
-        "description": "Fiind cel mai tanar din echipa, Yuki aduce acel vibe proaspat si curios prin blana lui baltata si coama bicolora absolut unica. Desi este inca la inceput de drum si invata secretele meseriei, farmecul lui nativ il face deja favoritul tuturor.",
+        "description": "Fiind cel mai tanar din echipa, Yuki aduce acel vibe proaspat si curious prin blana lui baltata si coama bicolora absolut unica. Desi este inca la inceput de drum si invata secretele meseriei, farmecul lui nativ il face deja favoritul tuturor.",
         "imageAlt": "Yuki - Cal tanar si robust cu blana baltata in pete albe si maro, avand o coama bicolora, stand in picioare pe o alee pavata"
       },
       {
@@ -133,6 +133,20 @@
         "specialTrait": "Afectiune pura",
         "description": "Scoty este un Gypsy Vanner superb, cu o personalitate incredibil de blanda, blana baltata si o coama lunga si deschisa la culoare. Este un cal extrem de afectuos care adora interactiunea umana, fiind mereu gata sa ofere alinare si caldura celor din jur.",
         "imageAlt": "Scoty - Cal Gypsy Vanner cu blana baltata alb-negru si coama lunga si blonda, primind cu blandete un sarut pe frunte de la un barbat cu barba si caciula"
+      },
+      {
+        "name": "Ria",
+        "role": "Diva gratioasa si experta in imbratisari terapeutice de grup",
+        "specialTrait": "Blandete profunda",
+        "description": "Ria este o iapa tanara de Gypsy Vanner, remarcabila prin natura sa blanda, roba baltata si coama lunga, luminoasa. Fiind profund atasata de oameni, ea cauta mereu interactiunea directa si reuseste sa transmita liniste si alinare tuturor celor care o cunosc.",
+        "imageAlt": "Ria - Iapa Gypsy Vanner baltata (alb-negru) cu o coama lunga si blonda, plimbata la coarda"
+      },
+      {
+        "name": "Onyx",
+        "role": "Uriasul bland si bodyguard-ul oficial al bunei dispozitii",
+        "specialTrait": "Prezenta linistitoare",
+        "description": "Onyx este un armasar tanar de Gypsy Vanner, fratele Riei, remarcabil prin statura sa impunatoare, roba baltata si coama lunga, spectaculoasa. Un cal extrem de loial, el emana o forta linistita si ofera siguranta si caldura de la prima interactiune.",
+        "imageAlt": "Onyx - Cal Gypsy Vanner baltat (alb-negru) cu o coama lunga, fratele Riei, plimbat la coarda"
       }
     ]
   },
