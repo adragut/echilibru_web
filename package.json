@@ -13,9 +13,9 @@
     "strip-diacritics": "node ./scripts/strip-diacritics.js"
   },
   "dependencies": {
-    "@astrojs/node": "^8.3.4",
-    "@astrojs/tailwind": "^5.0.0",
-    "astro": "^5.0.0",
+    "@astrojs/node": "^11.0.3",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^7.1.6",
     "nodemailer": "^9.0.3",
     "tailwindcss": "^3.4.1"
   },
