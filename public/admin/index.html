@@ -8,35 +8,29 @@
 </head>
 <body>
   <script>
-    // Initialize Decap CMS
     window.CMS_MANUAL_INIT = true;
     
-    // Use local backend when running locally
-    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-    
-    const config = {
-      backend: {
-        name: 'git-gateway',
-        branch: 'main',
-        local_backend: isLocal
+    function initCMS() {
+      if (typeof CMS === 'undefined') {
+        setTimeout(initCMS, 100);
+        return;
       }
-    };
-    
-    if (isLocal) {
-      // For local development, we'll load the local config
-      fetch('/admin/config.local.yml')
-        .then(res => res.text())
-        .then(yaml => {
-          // Parse YAML manually or use the loaded config
-          config.backend.local_backend = true;
-          CMS.init({ config });
-        })
-        .catch(() => {
-          CMS.init({ config });
-        });
-    } else {
+      
+      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      
+      const config = {
+        backend: {
+          name: 'git-gateway',
+          branch: 'main',
+          local_backend: isLocal
+        },
+        configPath: isLocal ? '/api/config.yml' : '/admin/config.yml'
+      };
+      
       CMS.init({ config });
     }
+    
+    initCMS();
   </script>
 </body>
 </html>

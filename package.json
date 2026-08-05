@@ -11,7 +11,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.astro",
     "format": "prettier --write .",
     "strip-diacritics": "node ./scripts/strip-diacritics.js",
-    "cms": "decap-server"
+    "cms": "npx decap-server"
   },
   "dependencies": {
     "@astrojs/node": "^11.0.3",

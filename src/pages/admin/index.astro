@@ -1,0 +1,10 @@
+---
+// This page serves the Decap CMS admin interface
+import fs from 'fs';
+import path from 'path';
+
+const adminHtmlPath = path.join(import.meta.dirname, '../../../public/admin/index.html');
+const adminHtml = fs.readFileSync(adminHtmlPath, 'utf-8');
+---
+
+<Fragment set:html={adminHtml} />
