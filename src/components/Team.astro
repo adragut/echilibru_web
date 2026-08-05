@@ -1,12 +1,10 @@
 ---
-import copy from '../content/copy.json';
+import { getEntry } from 'astro:content';
 import assets from '../content/assets.json';
+import { getEntry as getNavEntry } from 'astro:content';
 
-interface Props {
-  echipa?: typeof copy.echipa;
-}
-
-const { echipa = copy.echipa } = Astro.props;
+const echipa = await getEntry('echipa', 'echipa/echipa');
+const nav = await getNavEntry('navigation', 'navigation/navigation');
 
 // Unique, high-quality local images matching the descriptions of Anabelle, Pony, and Aris
 const memberImages = [
@@ -22,7 +20,7 @@ const memberImages = [
   assets.teamOnyx,
 ];
 
-const getSpecialTrait = (member: (typeof echipa.members)[number]) => {
+const getSpecialTrait = (member: (typeof echipa.data.members)[number]) => {
   if ('specialTrait' in member && typeof member.specialTrait === 'string' && member.specialTrait.trim()) {
     return member.specialTrait;
   }
@@ -34,18 +32,18 @@ const getSpecialTrait = (member: (typeof echipa.members)[number]) => {
 <section id="echipa" class="py-24 bg-cream-50 relative overflow-hidden">
   <div class="mx-auto max-w-7xl px-6 relative z-10">
     <div class="text-center mb-20 reveal">
-      <span class="text-sand-900 font-sans text-xs font-bold tracking-[0.2em] uppercase mb-3 block">{copy.navigation.links[2].label}</span>
+      <span class="text-sand-900 font-sans text-xs font-bold tracking-[0.2em] uppercase mb-3 block">{nav.data.links[2].label}</span>
       <h2 class="font-serif font-bold text-forest-950 mb-6 text-3xl sm:text-4xl lg:text-5xl tracking-tight">
-        {echipa.sectionTitle}
+        {echipa.data.sectionTitle}
       </h2>
       <div class="w-16 h-[2px] bg-sand-900 mx-auto mb-6"></div>
       <p class="font-sans text-slate-600 mb-4 max-w-2xl mx-auto text-lg leading-relaxed">
-        {echipa.description}
+        {echipa.data.description}
       </p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8" id="team-grid">
-      {echipa.members.map((member, idx) => (
+      {echipa.data.members.map((member, idx) => (
         <div
           class="bg-white rounded-3xl overflow-hidden shadow-sm hover-lift transition-all duration-300 flex flex-col h-full reveal group border border-slate-100/50 team-card"
           style={`transition-delay: ${idx * 150}ms`}

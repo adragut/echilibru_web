@@ -1,12 +1,8 @@
 ---
-import copy from '../content/copy.json';
+import { getEntry } from 'astro:content';
 import assets from '../content/assets.json';
 
-interface Props {
-  footer?: typeof copy.footer;
-}
-
-const { footer = copy.footer } = Astro.props;
+const footer = await getEntry('footer', 'footer/footer');
 ---
 
 <footer class="bg-forest-950 text-white border-t border-forest-900">
@@ -17,19 +13,19 @@ const { footer = copy.footer } = Astro.props;
       <div>
         <p class="font-serif font-bold text-xl mb-2"><img src={assets.logo} alt="ECHILIBRU logo" class="h-10 inline-block align-middle"/></p>
         <p class="text-slate-300 font-sans text-xs tracking-wide">
-          {footer.tagline}
+          {footer.data.tagline}
         </p>
       </div>
 
       <div class="flex flex-wrap justify-center gap-6">
-        {footer.links.map(link => (
+        {footer.data.links.map(link => (
           <a href={link.href} class="font-sans text-xs font-medium hover:text-sand-400 transition-colors tracking-widest uppercase">{link.label}</a>
         ))}
       </div>
 
       <div class="md:text-right text-center">
-        <p class="text-slate-300 font-sans text-xs">{footer.copyright}</p>
-        <p class="text-slate-400 font-sans text-[11px] mt-1 italic tracking-wide">{footer.tagline2}</p>
+        <p class="text-slate-300 font-sans text-xs">{footer.data.copyright}</p>
+        <p class="text-slate-400 font-sans text-[11px] mt-1 italic tracking-wide">{footer.data.tagline2}</p>
       </div>
     </div>
   </div>

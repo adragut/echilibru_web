@@ -1,12 +1,10 @@
 ---
-import copy from '../content/copy.json';
+import { getEntry } from 'astro:content';
 import assets from '../content/assets.json';
+import { getEntry as getNavEntry } from 'astro:content';
 
-interface Props {
-  servicii?: typeof copy.servicii;
-}
-
-const { servicii = copy.servicii } = Astro.props;
+const servicii = await getEntry('servicii', 'servicii/servicii');
+const nav = await getNavEntry('navigation', 'navigation/navigation');
 
 const serviceImages = [
   assets.serviceDezvoltare,
@@ -18,18 +16,18 @@ const serviceImages = [
 <section id="servicii" class="py-24 bg-white relative overflow-hidden">
   <div class="mx-auto max-w-7xl px-6 relative z-10">
     <div class="text-center mb-20 reveal">
-      <span class="text-sand-900 font-sans text-xs font-bold tracking-[0.2em] uppercase mb-3 block">{copy.navigation.links[1].label}</span>
+      <span class="text-sand-900 font-sans text-xs font-bold tracking-[0.2em] uppercase mb-3 block">{nav.data.links[1].label}</span>
       <h2 class="font-serif font-bold text-forest-950 mb-6 text-3xl sm:text-4xl lg:text-5xl tracking-wide">
-        {servicii.sectionTitle}
+        {servicii.data.sectionTitle}
       </h2>
       <div class="w-16 h-[2px] bg-sand-900 mx-auto mb-6"></div>
       <p class="font-sans text-slate-600 mb-4 max-w-2xl mx-auto text-lg sm:text-xl leading-relaxed">
-        {servicii.description}
+        {servicii.data.description}
       </p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8">
-      {servicii.cards.map((card, idx) => (
+      {servicii.data.cards.map((card, idx) => (
         <a
           href="#contact"
           class="bg-cream-50 rounded-3xl overflow-hidden shadow-sm hover-lift transition-all duration-300 flex flex-col h-full reveal group border border-slate-100/30"

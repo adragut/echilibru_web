@@ -1,12 +1,8 @@
 ---
-import copy from '../content/copy.json';
+import { getEntry } from 'astro:content';
 import assets from '../content/assets.json';
 
-interface Props {
-  navigation?: typeof copy.navigation;
-}
-
-const { navigation = copy.navigation } = Astro.props;
+const navigation = await getEntry('navigation', 'navigation/navigation');
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass">
@@ -17,13 +13,13 @@ const { navigation = copy.navigation } = Astro.props;
       </a>
 
       <div class="hidden md:flex items-center space-x-8">
-        {navigation.links.map(link => (
+{navigation.data.links.map(link => (
           <a href={link.href} class="font-sans text-xs font-medium hover:text-sand-900 transition-colors tracking-widest uppercase">{link.label}</a>
         ))}
         <a
           href="#contact"
           class="bg-forest-950 text-white px-5 py-2.5 rounded-full hover:bg-forest-900 hover:scale-[1.02] active:scale-[0.98] transition-all font-sans font-bold text-xs uppercase tracking-wider"
-        >{navigation.cta}</a>
+        >{navigation.data.cta}</a>
       </div>
 
       <button id="mobile-menu-btn" class="md:hidden text-forest-950 focus:outline-none" aria-label="Toggle menu">
@@ -46,13 +42,13 @@ const { navigation = copy.navigation } = Astro.props;
     </div>
 
     <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 pb-4">
-      {navigation.links.map(link => (
+      {navigation.data.links.map(link => (
         <a href={link.href} class="block font-sans text-xs font-medium hover:text-sand-900 transition-colors tracking-widest uppercase">{link.label}</a>
       ))}
       <a
         href="#contact"
         class="block bg-forest-950 text-white px-5 py-2.5 rounded-full hover:bg-forest-900 hover:scale-[1.02] active:scale-[0.98] transition-all text-center font-sans font-bold text-xs uppercase tracking-wider"
-      >{navigation.cta}</a>
+      >{navigation.data.cta}</a>
     </div>
   </nav>
 </header>

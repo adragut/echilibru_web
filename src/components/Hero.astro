@@ -1,15 +1,11 @@
 ---
-import copy from '../content/copy.json';
+import { getEntry } from 'astro:content';
 import assets from '../content/assets.json';
 
-interface Props {
-  hero?: typeof copy.hero;
-}
-
-const { hero = copy.hero } = Astro.props;
+const hero = await getEntry('hero', 'hero/hero');
 
 // Dynamically highlights keywords with elegant brand colors
-const formattedHeadline = hero.headline
+const formattedHeadline = hero.data.headline
   .replace('Echilibru', '<span class="text-sand-900 drop-shadow-sm font-semibold">Echilibru</span>')
   .replace('vindecare', '<span style="color: #0092B1;" class="italic font-normal font-serif">vindecare</span>');
 ---
@@ -25,17 +21,17 @@ const formattedHeadline = hero.headline
         <h1 class="font-serif font-bold text-forest-950 mb-6 leading-[1.1] clamp-text" set:html={formattedHeadline}>
         </h1>
         <p class="font-sans font-medium text-slate-600 mb-10 leading-relaxed text-lg sm:text-xl tracking-wide max-w-xl">
-          {hero.subheadline}
+          {hero.data.subheadline}
         </p>
         <div class="flex flex-col sm:flex-row gap-5">
           <a
             href="#servicii"
             class="bg-forest-950 text-white px-8 py-4 rounded-full btn-transition text-center font-sans font-semibold tracking-wide text-sm"
-          >{hero.ctaPrimary}</a>
+          >{hero.data.ctaPrimary}</a>
           <a
             href="#contact"
             class="border-2 border-forest-950 text-forest-950 px-8 py-4 rounded-full btn-transition text-center font-sans font-semibold tracking-wide text-sm hover:bg-forest-950 hover:text-white"
-          >{hero.ctaSecondary}</a>
+          >{hero.data.ctaSecondary}</a>
         </div>
       </div>
       <div class="lg:w-1/2 reveal" style="transition-delay: 200ms;">
@@ -46,7 +42,7 @@ const formattedHeadline = hero.headline
           <!-- Main background image (pasture landscape) -->
           <img
             src={assets.hero}
-            alt={hero.imageAlt}
+            alt={hero.data.imageAlt}
             class="relative w-[85%] h-[300px] sm:h-[400px] lg:h-[460px] rounded-[2rem] shadow-xl object-cover border border-white/50 z-10 hover:scale-[1.01] transition-transform duration-500"
           />
 

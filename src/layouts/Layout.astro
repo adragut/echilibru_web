@@ -1,5 +1,7 @@
 ---
-import copy from '../content/copy.json';
+import { getEntry } from 'astro:content';
+
+const seo = await getEntry('seo', 'seo/seo');
 
 interface Props {
   title?: string;
@@ -7,8 +9,8 @@ interface Props {
 }
 
 const { 
-  title = copy.seo.title, 
-  description = copy.seo.description 
+  title = seo.data.title, 
+  description = seo.data.description 
 } = Astro.props;
 ---
 

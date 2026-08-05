@@ -1,11 +1,7 @@
 ---
-import copy from '../content/copy.json';
+import { getEntry } from 'astro:content';
 
-interface Props {
-  philosophie?: typeof copy.philosophie;
-}
-
-const { philosophie = copy.philosophie } = Astro.props;
+const philosophie = await getEntry('philosophie', 'philosophie/philosophie');
 
 // SVG paths mapped by icon identifier
 const paths = {
@@ -30,18 +26,18 @@ const paths = {
 
   <div class="mx-auto max-w-7xl px-6 relative z-10">
     <div class="text-center mb-20 reveal">
-      <span class="text-sand-900 font-sans text-xs font-bold tracking-[0.2em] uppercase mb-3 block">{philosophie.sectionTitle}</span>
+      <span class="text-sand-900 font-sans text-xs font-bold tracking-[0.2em] uppercase mb-3 block">{philosophie.data.sectionTitle}</span>
       <h2 class="font-serif font-bold text-forest-950 mb-6 text-3xl sm:text-4xl lg:text-5xl tracking-tight">
         Filosofia Noastra
       </h2>
       <div class="w-16 h-[2px] bg-sand-900 mx-auto mb-6"></div>
       <p class="font-sans text-slate-600 mb-4 max-w-2xl mx-auto text-lg sm:text-xl leading-relaxed">
-        {philosophie.description}
+        {philosophie.data.description}
       </p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8">
-      {philosophie.values.map((value, idx) => {
+      {philosophie.data.values.map((value, idx) => {
         const iconConfig = paths[value.icon as keyof typeof paths] || paths.heart;
         return (
           <div 
