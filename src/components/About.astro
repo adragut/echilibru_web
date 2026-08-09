@@ -1,10 +1,11 @@
 ---
 import { getEntry } from 'astro:content';
-import assets from '../content/assets.json';
+import AstroImage from './AstroImage.astro';
 import { getEntry as getNavEntry } from 'astro:content';
 
 const about = await getEntry('about', 'about/about');
 const nav = await getNavEntry('navigation', 'navigation/navigation');
+const assets = await getEntry('assets', 'assets/assets');
 ---
 
 <section id="despre" class="py-24 bg-white relative overflow-hidden">
@@ -24,8 +25,8 @@ const nav = await getNavEntry('navigation', 'navigation/navigation');
       <div class="reveal relative">
         <!-- Floating offset backdrop card -->
         <div class="absolute -inset-3 bg-sand-900/10 rounded-3xl transform -rotate-2"></div>
-        <img
-          src={assets.about}
+        <AstroImage
+          src={assets.data.about}
           alt={about.data.imageAlt}
           class="relative rounded-3xl shadow-2xl object-cover w-full h-[380px] border border-slate-100/50 hover:scale-[1.02] transition-transform duration-500"
         />

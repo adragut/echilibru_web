@@ -1,15 +1,16 @@
 ---
 import { getEntry } from 'astro:content';
-import assets from '../content/assets.json';
+import AstroImage from './AstroImage.astro';
 
 const navigation = await getEntry('navigation', 'navigation/navigation');
+const assets = await getEntry('assets', 'assets/assets');
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass">
   <nav class="mx-auto max-w-7xl px-6 py-4">
     <div class="flex items-center justify-between">
       <a href="/" class="flex items-center">
-        <img src={assets.logo} alt="ECHILIBRU logo" class="h-20 w-auto"/>
+        <AstroImage src={assets.data.logo} alt="ECHILIBRU logo" class="h-20 w-auto" />
       </a>
 
       <div class="hidden md:flex items-center space-x-8">

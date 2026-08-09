@@ -1,23 +1,24 @@
 ---
 import { getEntry } from 'astro:content';
-import assets from '../content/assets.json';
+import AstroImage from './AstroImage.astro';
 import { getEntry as getNavEntry } from 'astro:content';
 
 const echipa = await getEntry('echipa', 'echipa/echipa');
 const nav = await getNavEntry('navigation', 'navigation/navigation');
+const assets = await getEntry('assets', 'assets/assets');
 
 // Unique, high-quality local images matching the descriptions of Anabelle, Pony, and Aris
 const memberImages = [
-  assets.teamAnabelle,
-  assets.teamPony,
-  assets.teamAris,
-  assets.teamCappuchino,
-  assets.teamCioco,
-  assets.teamArgo,
-  assets.teamYuki,
-  assets.teamScoty,
-  assets.teamRia,
-  assets.teamOnyx,
+  assets.data.teamAnabelle,
+  assets.data.teamPony,
+  assets.data.teamAris,
+  assets.data.teamCappuchino,
+  assets.data.teamCioco,
+  assets.data.teamArgo,
+  assets.data.teamYuki,
+  assets.data.teamScoty,
+  assets.data.teamRia,
+  assets.data.teamOnyx,
 ];
 
 const getSpecialTrait = (member: (typeof echipa.data.members)[number]) => {
@@ -54,7 +55,7 @@ const getSpecialTrait = (member: (typeof echipa.data.members)[number]) => {
               {getSpecialTrait(member)}
             </div>
             <div class="absolute inset-0 bg-forest-950/5 z-10 transition-opacity duration-300 group-hover:opacity-0"></div>
-            <img
+            <AstroImage
               src={memberImages[idx] || memberImages[0]}
               alt={member.imageAlt}
               class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"

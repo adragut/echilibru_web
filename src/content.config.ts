@@ -1,6 +1,145 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
+// ── TypeScript Interfaces ──────────────────────────────────────────────────────
+// These mirror the Zod schemas and provide IDE autocomplete / type safety
+// in components. Zod already infers types, but these explicit interfaces
+// make the data model self-documenting and enable autocomplete on nested
+// objects.
+
+export interface SEOData {
+  title: string;
+  description: string;
+}
+
+export interface NavLink {
+  href: string;
+  label: string;
+}
+
+export interface NavigationData {
+  logo: string;
+  links: NavLink[];
+  cta: string;
+}
+
+export interface HeroData {
+  headline: string;
+  subheadline: string;
+  ctaPrimary: string;
+  ctaSecondary: string;
+  imageAlt: string;
+}
+
+export interface Value {
+  title: string;
+  description: string;
+  icon: 'users' | 'sun' | 'heart';
+}
+
+export interface PhilosophieData {
+  sectionTitle: string;
+  description: string;
+  values: Value[];
+}
+
+export interface ServiceCard {
+  title: string;
+  description: string;
+  imageAlt: string;
+}
+
+export interface ServiciiData {
+  sectionTitle: string;
+  description: string;
+  cards: ServiceCard[];
+}
+
+export interface TeamMember {
+  name: string;
+  role: string;
+  specialTrait: string;
+  description: string;
+  imageAlt: string;
+}
+
+export interface EchipaData {
+  sectionTitle: string;
+  description: string;
+  members: TeamMember[];
+}
+
+export interface ContactFormData {
+  nameLabel: string;
+  emailLabel: string;
+  serviceLabel: string;
+  messageLabel: string;
+  submit: string;
+  serviceOptions: string[];
+}
+
+export interface SocialLink {
+  platform: string;
+  url: string;
+  icon: 'facebook' | 'instagram';
+}
+
+export interface ContactInfo {
+  title: string;
+  address: { label: string; lines: string[] };
+  phone: { label: string; value: string };
+  email: { label: string; value: string };
+}
+
+export interface ContactData {
+  sectionTitle: string;
+  description: string;
+  form: ContactFormData;
+  socialMedia: { title: string; links: SocialLink[] };
+  info: ContactInfo;
+  mapUrl: string;
+}
+
+export interface FooterData {
+  logo: string;
+  tagline: string;
+  links: NavLink[];
+  copyright: string;
+  tagline2: string;
+}
+
+export interface AboutData {
+  sectionTitle: string;
+  description: string;
+  imageAlt: string;
+  passionTitle: string;
+  passionText1: string;
+  passionText2: string;
+  badges: string[];
+}
+
+export interface AssetsData {
+  hero: string;
+  heroSecondary: string;
+  about: string;
+  logo: string;
+  serviceDezvoltare: string;
+  serviceHipoterapie: string;
+  serviceTeambuilding: string;
+  teamAnabelle: string;
+  teamPony: string;
+  teamAris: string;
+  teamCappuchino: string;
+  teamCioco: string;
+  teamArgo: string;
+  teamYuki: string;
+  teamScoty: string;
+  teamRia: string;
+  teamOnyx: string;
+}
+
+// ── Schemas ────────────────────────────────────────────────────────────────────
+
 const seo = defineCollection({
   loader: glob({ pattern: 'seo/seo.json', base: './src/content' }),
   schema: z.object({
@@ -40,7 +179,7 @@ const philosophie = defineCollection({
     values: z.array(z.object({
       title: z.string(),
       description: z.string(),
-      icon: z.string(),
+      icon: z.enum(['users', 'sun', 'heart']),
     })),
   }),
 });
@@ -91,7 +230,7 @@ const contact = defineCollection({
       links: z.array(z.object({
         platform: z.string(),
         url: z.string().url(),
-        icon: z.string(),
+        icon: z.enum(['facebook', 'instagram']),
       })),
     }),
     info: z.object({

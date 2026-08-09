@@ -1,15 +1,16 @@
 ---
 import { getEntry } from 'astro:content';
-import assets from '../content/assets.json';
+import AstroImage from './AstroImage.astro';
 import { getEntry as getNavEntry } from 'astro:content';
 
 const servicii = await getEntry('servicii', 'servicii/servicii');
 const nav = await getNavEntry('navigation', 'navigation/navigation');
+const assets = await getEntry('assets', 'assets/assets');
 
 const serviceImages = [
-  assets.serviceDezvoltare,
-  assets.serviceHipoterapie,
-  assets.serviceTeambuilding
+  assets.data.serviceDezvoltare,
+  assets.data.serviceHipoterapie,
+  assets.data.serviceTeambuilding
 ];
 ---
 
@@ -35,7 +36,7 @@ const serviceImages = [
         >
           <div class="h-60 overflow-hidden relative">
             <div class="absolute inset-0 bg-forest-950/10 z-10 transition-opacity duration-300 group-hover:opacity-0"></div>
-            <img
+            <AstroImage
               src={serviceImages[idx] || serviceImages[0]}
               alt={card.imageAlt}
               class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"

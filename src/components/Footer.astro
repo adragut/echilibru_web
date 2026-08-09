@@ -1,8 +1,9 @@
 ---
 import { getEntry } from 'astro:content';
-import assets from '../content/assets.json';
+import AstroImage from './AstroImage.astro';
 
 const footer = await getEntry('footer', 'footer/footer');
+const assets = await getEntry('assets', 'assets/assets');
 ---
 
 <footer class="bg-forest-950 text-white border-t border-forest-900">
@@ -11,7 +12,7 @@ const footer = await getEntry('footer', 'footer/footer');
       class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 text-center md:text-left"
     >
       <div>
-        <p class="font-serif font-bold text-xl mb-2"><img src={assets.logo} alt="ECHILIBRU logo" class="h-10 inline-block align-middle"/></p>
+        <p class="font-serif font-bold text-xl mb-2"><AstroImage src={assets.data.logo} alt="ECHILIBRU logo" class="h-10 inline-block align-middle" /></p>
         <p class="text-slate-300 font-sans text-xs tracking-wide">
           {footer.data.tagline}
         </p>
