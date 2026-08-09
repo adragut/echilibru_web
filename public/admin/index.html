@@ -4,20 +4,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-</head>
-<body>
+  <!-- MUST be set before decap-cms loads, otherwise the CMS auto-inits too early
+       and crashes trying to mount before the DOM is ready -->
   <script>
     window.CMS_MANUAL_INIT = true;
-    
+  </script>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script src="/admin/preview.js"></script>
+</head>
+<body>
+  <div id="cms"></div>
+  <script>
+    // Decap CMS v3 exposes the global as `window.CMS` (and `window.DecapCms`)
     function initCMS() {
-      if (typeof CMS === 'undefined') {
+      if (typeof window.CMS === 'undefined') {
         setTimeout(initCMS, 100);
         return;
       }
-      
+
       const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-      
+
       const config = {
         backend: {
           name: 'git-gateway',
@@ -26,11 +32,20 @@
         },
         configPath: isLocal ? '/api/config.yml' : '/admin/config.yml'
       };
-      
-      CMS.init({ config });
+
+      window.CMS.init({ config });
+
+      // Register preview templates (defined in /admin/preview.js)
+      if (typeof window.registerPreviewTemplates === 'function') {
+        window.registerPreviewTemplates();
+      }
     }
-    
-    initCMS();
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCMS);
+    } else {
+      initCMS();
+    }
   </script>
 </body>
 </html>
