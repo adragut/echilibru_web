@@ -33,7 +33,7 @@
         configPath: isLocal ? '/api/config.yml' : '/admin/config.yml'
       };
 
-      window.CMS.init({ config });
+      window.CMS.init({ configPath: isLocal ? '/api/config.yml' : '/admin/config.yml' });
 
       // Register preview templates (defined in /admin/preview.js)
       if (typeof window.registerPreviewTemplates === 'function') {
