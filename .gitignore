@@ -62,3 +62,18 @@ coverage/
 .cache/
 .temp/
 tmp/.env
+
+# AI 
+.claude/
+.cursor/
+.deepseek/
+.gemini/
+.google/
+.openai/
+.anthropic/
+.perplexity/
+.grok/
+.grok/
+.grok/
+.grok/
+.grok/
