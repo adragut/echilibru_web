@@ -16,7 +16,7 @@
   <div id="cms"></div>
   <script>
     // Decap CMS v3 exposes the global as `window.CMS` (and `window.DecapCms`)
-    function initCMS() {
+    async function initCMS() {
       if (typeof window.CMS === 'undefined') {
         setTimeout(initCMS, 100);
         return;
@@ -24,16 +24,22 @@
 
       const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 
-      const config = {
-        backend: {
-          name: 'git-gateway',
-          branch: 'main',
-          local_backend: isLocal
-        },
-        configPath: isLocal ? '/api/config.yml' : '/admin/config.yml'
-      };
+      // Fetch config YAML from the API endpoint, then init with inline config
+      const configPath = isLocal ? '/api/config.yml' : '/admin/config.yml';
+      let config;
+      try {
+        const response = await fetch(configPath);
+        if (!response.ok) throw new Error('Config fetch failed: ' + response.status);
+        const yamlText = await response.text();
+        // Decap CMS v3 uses js-yaml internally; we'll use the bundled loader
+        config = window.YAML ? window.YAML.load(yamlText) : jsyaml.load(yamlText);
+      } catch (e) {
+        console.error('Failed to load CMS config:', e);
+        return;
+      }
 
-      window.CMS.init({ configPath: isLocal ? '/api/config.yml' : '/admin/config.yml' });
+      // Init with inline config
+      window.CMS.init(config);
 
       // Register preview templates (defined in /admin/preview.js)
       if (typeof window.registerPreviewTemplates === 'function') {
