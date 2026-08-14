@@ -1,9 +1,20 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: "adragut/echilibru_web"  # TODO: Replace with your actual repo path
   branch: main
+  base_url: "https://decap.echilibru.ro"  # TODO: Replace with your proxy domain
+  auth_endpoint: "auth"
+  open_authoring: false
 
-media_folder: public/assets/images
-public_folder: /assets/images
+media_folder: "public/assets/images"
+public_folder: "/assets/images"
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+site_url: "https://echilibru.ro"
+
+# Enable the editorial workflow (draft/review/publish)
+publish_mode: editorial_workflow
 
 collections:
   - name: "seo"

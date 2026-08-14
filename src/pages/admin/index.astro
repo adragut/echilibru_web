@@ -1,10 +1,63 @@
 ---
 // This page serves the Decap CMS admin interface
-import fs from 'fs';
-import path from 'path';
-
-const adminHtmlPath = path.join(import.meta.dirname, '../../../public/admin/index.html');
-const adminHtml = fs.readFileSync(adminHtmlPath, 'utf-8');
 ---
 
-<Fragment set:html={adminHtml} />
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+  <!-- Decap CMS manual initialization -->
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
+  <!-- js-yaml required for Decap CMS v3 config parsing -->
+  <script src="https://unpkg.com/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <!-- Decap CMS core -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- Custom preview templates - inline to avoid bundling issues -->
+  <script is:inline src="/admin/preview.js"></script>
+</head>
+<body>
+  <div id="cms"></div>
+  <script>
+    // Decap CMS v3 exposes the global as `window.CMS`
+    async function initCMS() {
+      // Wait for CMS to be available
+      if (typeof window.CMS === 'undefined') {
+        setTimeout(initCMS, 100);
+        return;
+      }
+
+      // Fetch config YAML - works for both local dev and production
+      let config;
+      try {
+        const configPath = '/admin/config.yml';
+        const response = await fetch(configPath);
+        if (!response.ok) throw new Error('Config fetch failed: ' + response.status);
+        const yamlText = await response.text();
+        config = jsyaml.load(yamlText);
+      } catch (e) {
+        console.error('Failed to load CMS config:', e);
+        console.error('Make sure /admin/config.yml is accessible');
+        return;
+      }
+
+      // Initialize Decap CMS with the config
+      window.CMS.init(config);
+
+      // Register preview templates
+      if (typeof window.registerPreviewTemplates === 'function') {
+        window.registerPreviewTemplates();
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCMS);
+    } else {
+      initCMS();
+    }
+  </script>
+</body>
+</html>

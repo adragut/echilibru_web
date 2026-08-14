@@ -4,46 +4,46 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
-  <!-- MUST be set before decap-cms loads, otherwise the CMS auto-inits too early
-       and crashes trying to mount before the DOM is ready -->
+  <!-- Decap CMS manual initialization -->
   <script>
     window.CMS_MANUAL_INIT = true;
   </script>
-  <!-- js-yaml is required for parsing YAML config but isn't exposed by decap-cms v3 -->
+  <!-- js-yaml required for Decap CMS v3 config parsing -->
   <script src="https://unpkg.com/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <!-- Decap CMS core -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- Custom preview templates -->
   <script src="/admin/preview.js"></script>
 </head>
 <body>
   <div id="cms"></div>
   <script>
-    // Decap CMS v3 exposes the global as `window.CMS` (and `window.DecapCms`)
+    // Decap CMS v3 exposes the global as `window.CMS`
     async function initCMS() {
+      // Wait for CMS to be available
       if (typeof window.CMS === 'undefined') {
         setTimeout(initCMS, 100);
         return;
       }
 
-      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-
-      // Fetch config YAML from the API endpoint, then init with inline config
-      const configPath = isLocal ? '/api/config.yml' : '/admin/config.yml';
+      // Fetch config YAML - works for both local dev and production
       let config;
       try {
+        const configPath = '/admin/config.yml';
         const response = await fetch(configPath);
         if (!response.ok) throw new Error('Config fetch failed: ' + response.status);
         const yamlText = await response.text();
-        // Decap CMS v3 uses js-yaml internally; we'll use the bundled loader
-        config = window.YAML ? window.YAML.load(yamlText) : jsyaml.load(yamlText);
+        config = jsyaml.load(yamlText);
       } catch (e) {
         console.error('Failed to load CMS config:', e);
+        console.error('Make sure /admin/config.yml is accessible');
         return;
       }
 
-      // Init with inline config
+      // Initialize Decap CMS with the config
       window.CMS.init(config);
 
-      // Register preview templates (defined in /admin/preview.js)
+      // Register preview templates
       if (typeof window.registerPreviewTemplates === 'function') {
         window.registerPreviewTemplates();
       }
