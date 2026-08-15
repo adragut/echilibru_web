@@ -1,0 +1,16 @@
+name = "decap-proxy"
+main = "src/index.ts"
+compatibility_date = "2026-08-14"
+compatibility_flags = ["nodejs_compat"]
+
+# For custom domain, uncomment and update:
+# route = { pattern = "decap.echilibru.ro", zone_name = "echilibru.ro", custom_domain = true }
+# workers_dev = false
+
+# Environment variables (set these as secrets in Cloudflare dashboard)
+# [vars]
+# GITHUB_REPO_PRIVATE = "1"  # Uncomment if your repo is private
+
+# For local development
+[dev]
+port = 8788

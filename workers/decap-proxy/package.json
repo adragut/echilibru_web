@@ -1,0 +1,12 @@
+{
+  "name": "decap-proxy",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker OAuth proxy for Decap CMS",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "publish": "wrangler deploy"
+  }
+}

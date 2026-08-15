@@ -1,0 +1,33 @@
+---
+import { getEntry } from 'astro:content';
+import AstroImage from './AstroImage.astro';
+
+const footer = await getEntry('footer', 'footer/footer');
+const assets = await getEntry('assets', 'assets/assets');
+---
+
+<footer class="bg-forest-950 text-white border-t border-forest-900">
+  <div class="mx-auto max-w-7xl px-6 py-12">
+    <div
+      class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 text-center md:text-left"
+    >
+      <div>
+        <p class="font-serif font-bold text-xl mb-2"><AstroImage src={assets.data.logo} alt="ECHILIBRU logo" class="h-10 inline-block align-middle" /></p>
+        <p class="text-slate-300 font-sans text-xs tracking-wide">
+          {footer.data.tagline}
+        </p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-6">
+        {footer.data.links.map(link => (
+          <a href={link.href} class="font-sans text-xs font-medium hover:text-sand-400 transition-colors tracking-widest uppercase">{link.label}</a>
+        ))}
+      </div>
+
+      <div class="md:text-right text-center">
+        <p class="text-slate-300 font-sans text-xs">{footer.data.copyright}</p>
+        <p class="text-slate-400 font-sans text-[11px] mt-1 italic tracking-wide">{footer.data.tagline2}</p>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,45 @@
+---
+/**
+ * AstroImage.astro
+ * A reusable, optimized image component for the Echilibru website.
+ *
+ * Features:
+ * - Lazy loading for non-critical images (default: loading="lazy")
+ * - Async decoding for non-blocking rendering
+ * - Proper width/height to prevent CLS
+ * - fetchpriority="high" support for hero/above-fold images
+ * - Responsive sizes attribute for different viewports
+ */
+
+interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  class?: string;
+  fetchpriority?: 'high' | 'low' | 'auto';
+  sizes?: string;
+}
+
+const {
+  src,
+  alt,
+  width,
+  height,
+  class: className = '',
+  fetchpriority = 'auto',
+  sizes = '(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw',
+} = Astro.props;
+---
+
+<img
+  src={src}
+  alt={alt}
+  width={width}
+  height={height}
+  class={className}
+  loading={fetchpriority === 'high' ? 'eager' : 'lazy'}
+  decoding="async"
+  {fetchpriority}
+  {sizes}
+/>

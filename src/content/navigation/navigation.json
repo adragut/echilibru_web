@@ -1,0 +1,10 @@
+{
+  "logo": "ECHILIBRU",
+  "links": [
+    { "href": "#despre", "label": "Despre" },
+    { "href": "#servicii", "label": "Servicii" },
+    { "href": "#echipa", "label": "Echipa" },
+    { "href": "#contact", "label": "Contact" }
+  ],
+  "cta": "Programeaza o sedinta"
+}

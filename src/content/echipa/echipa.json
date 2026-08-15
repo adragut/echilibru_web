@@ -1,0 +1,76 @@
+{
+  "sectionTitle": "Caii Noastri - Parteneri in Vindecare",
+  "description": "O echipa formata din cai exceptionali, fiecare cu o personalitate unica si farmec propriu, pregatiti sa iti ofere sprijin, echilibru si momente de conectare autentica.",
+  "members": [
+    {
+      "name": "Anabelle",
+      "role": "Sefa suprema a intelepciunii si experta in ignorat dramele din grajd",
+      "specialTrait": "Rabdare de fier",
+      "description": "Fiind cea mai in varsta, le-a vazut deja pe toate si nimic nu o mai surprinde, avand rabdarea de fier a unui bunic. Zvelta, eleganta si cu o blana murga stralucitoare, ea patruleaza pe camp cu aerul unui manager senior care stie ca totul depinde de ea.",
+      "imageAlt": "Anabelle - Cal murg, inalt si elegant, purtand cu calm o tanara calareata pe un camp deschis sub un cer cu nori spectaculosi"
+    },
+    {
+      "name": "Pony",
+      "role": "Director executiv de mangieri pe bot si cersit recompense",
+      "specialTrait": "Carisma pentru copii",
+      "description": "Desi numele lui nu lasa loc de mistere legate de statura, Pony compenseaza prin carisma pura si o blana alba cu picatele gri. Este specialistul nostru in topit inimile copiilor, avand o tehnica impecabila de a poza in cel mai bun prieten din lume pentru o recompensa.",
+      "imageAlt": "Pony - Cal mic de culoare alba cu picatele gri, primind cu blandete o mangiere pe bot de la un copilas cu palarie colorata"
+    },
+    {
+      "name": "Aris",
+      "role": "Model profesionist de selfie-uri si specialist in mirosit buzunare",
+      "specialTrait": "Vedeta fotogenica",
+      "description": "Aris este definitia calului fotogenic, gata oricand sa bage capul in poza cu o freza rebela si o coama neagra de rocker. Fie ca apropie bland botul de degetele unui copil sau ca fura prim-planul intr-un selfie, el stie sigur ca este vedeta grajdului.",
+      "imageAlt": "Aris - Cal maro cu coama neagra si bogata, surprins de aproape intr-un selfie amuzant alaturi de un barbat si interactionand bland cu un copil"
+    },
+    {
+      "name": "Cappuchino",
+      "role": "Saltea ortopedica premium si expert in somnoterapie",
+      "specialTrait": "Calm absolut",
+      "description": "Cu blana lui de culoarea cafelei cu lapte si o coama blonda ca de revista, Cappuchino este definitia calmului absolut. Este atat de tolerant si relaxat incat copiii il folosesc deseori pe post de pat confortabil pentru un pui de somn in timpul sedintelor.",
+      "imageAlt": "Cappuchino - Cal de culoare roib-deschis cu coama blonda si o dunga alba pe fata, stand linistit in timp ce un copil este intins pe spatele lui intr-o sesiune de terapie"
+    },
+    {
+      "name": "Cioco",
+      "role": "Stilist profesionist si maestru de ceremonii la intampinarea oaspetilor",
+      "specialTrait": "Salut gratios",
+      "description": "Cioco este ciocolata noastra cu personalitate efervescenta si o coama impletita elegant, gata parca sa apara pe covorul rosu. Este genul de cal politicos care stie sa faca o intrare memorabila, ridicand piciorul ca intr-o reverenta gratioasa pentru a-si saluta vizitatorii.",
+      "imageAlt": "Cioco - Cal murg inchis cu coama impletita in codite, ridicand un picior din fata ca intr-un salut catre un copil si o femeie"
+    },
+    {
+      "name": "Argo",
+      "role": "Print arab cu origini nobile si expert in mers elegant la pas",
+      "specialTrait": "Eleganta nobila",
+      "description": "Argo este pur sangele nostru arab, un cal alb cu o alura atletica si o eleganta innascuta care atrage toate privirile. Have acel aer mandru specific rasei, dar il foloseste exclusiv pentru a impresiona calaretii si pentru a poza impecabil in manej.",
+      "imageAlt": "Argo - Cal arab de culoare alba, cu alura zvelta si eleganta, purtand cu gratie o calareata in manej in timpul unei sedinte de echitatie"
+    },
+    {
+      "name": "Yuki",
+      "role": "Junior de perspectiva si responsabil cu energia tineresca a grupului",
+      "specialTrait": "Curiozitate tanara",
+      "description": "Fiind cel mai tanar din echipa, Yuki aduce acel vibe proaspat si curious prin blana lui baltata si coama bicolora absolut unica. Desi este inca la inceput de drum si invata secretele meseriei, farmecul lui nativ il face deja favoritul tuturor.",
+      "imageAlt": "Yuki - Cal tanar si robust cu blana baltata in pete albe si maro, avand o coama bicolora, stand in picioare pe o alee pavata"
+    },
+    {
+      "name": "Scoty",
+      "role": "Suflet de artist si campion la oferit afectiune pura",
+      "specialTrait": "Afectiune pura",
+      "description": "Scoty este un Gypsy Vanner superb, cu o personalitate incredibil de blanda, blana baltata si o coama lunga si deschisa la culoare. Este un cal extrem de afectuos care adora interactiunea umana, fiind mereu gata sa ofere alinare si caldura celor din jur.",
+      "imageAlt": "Scoty - Cal Gypsy Vanner cu blana baltata alb-negru si coama lunga si blonda, primind cu blandete un sarut pe frunte de la un barbat cu barba si caciula"
+    },
+    {
+      "name": "Ria",
+      "role": "Diva gratioasa si experta in imbratisari terapeutice de grup",
+      "specialTrait": "Blandete profunda",
+      "description": "Ria este o iapa tanara de Gypsy Vanner, remarcabila prin natura sa blanda, roba baltata si coama lunga, luminoasa. Fiind profund atasata de oameni, ea cauta mereu interactiunea directa si reuseste sa transmita liniste si alinare tuturor celor care o cunosc.",
+      "imageAlt": "Ria - Iapa Gypsy Vanner baltata (alb-negru) cu o coama lunga si blonda, plimbata la coarda"
+    },
+    {
+      "name": "Onyx",
+      "role": "Uriasul bland si bodyguard-ul oficial al bunei dispozitii",
+      "specialTrait": "Prezenta linistitoare",
+      "description": "Onyx este un armasar tanar de Gypsy Vanner, fratele Riei, remarcabil prin statura sa impunatoare, roba baltata si coama lunga, spectaculoasa. Un cal extrem de loial, el emana o forta linistita si ofera siguranta si caldura de la prima interactiune.",
+      "imageAlt": "Onyx - Cal Gypsy Vanner baltat (alb-negru) cu o coama lunga, fratele Riei, plimbat la coarda"
+    }
+  ]
+}

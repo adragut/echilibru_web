@@ -8,8 +8,6 @@ backend:
 
 media_folder: "public/assets/images"
 public_folder: "/assets/images"
-media_folder: "src/assets/images"
-public_folder: "/assets/images"
 
 site_url: "https://echilibru.ro"
 

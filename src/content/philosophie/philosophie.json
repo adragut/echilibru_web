@@ -1,0 +1,21 @@
+{
+  "sectionTitle": "Filosofia Noastra",
+  "description": "Credem in puterea transformatoare a conexiunii dintre om si cal, o relatie ghidata de prezenta non-judecatoare si de abilitatea nativa a cailor de a ne oglindi emotiile autentice.",
+  "values": [
+    {
+      "title": "Acceptare Neconditionata",
+      "description": "Caii nu judeca si nu pun etichete; ei raspund doar la adevarul tau interior, oferind un spatiu de siguranta deplina in care te poti exprima exact asa cum esti.",
+      "icon": "users"
+    },
+    {
+      "title": "Ancorare si Prezenta",
+      "description": "In preajma calului, trecutul si viitorul dispar. Interactionand cu el, inveti sa te conectezi cu momentul prezent, sa iti gestionezi emotiile si sa iti regasesti linistea.",
+      "icon": "sun"
+    },
+    {
+      "title": "Armonie si Recuperare",
+      "description": "Miscarea calului are un ritm terapeutic unic care stimuleaza corpul si mintea in egala masura, imbunatatind postura, echilibrul fizic si tonusul muscular.",
+      "icon": "heart"
+    }
+  ]
+}

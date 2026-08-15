@@ -1,0 +1,12 @@
+{
+  "logo": "ECHILIBRU",
+  "tagline": "Echilibru si vindecare, in ritmul naturii.",
+  "links": [
+    { "href": "#despre", "label": "Despre" },
+    { "href": "#servicii", "label": "Servicii" },
+    { "href": "#echipa", "label": "Echipa" },
+    { "href": "#contact", "label": "Contact" }
+  ],
+  "copyright": "© 2026 Terapie ECHILIBRU. Toate drepturile rezervate.",
+  "tagline2": "Un spatiu de siguranta si conexiune."
+}

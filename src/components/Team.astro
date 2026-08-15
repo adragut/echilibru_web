@@ -1,0 +1,100 @@
+---
+import { getEntry } from 'astro:content';
+import AstroImage from './AstroImage.astro';
+import { getEntry as getNavEntry } from 'astro:content';
+
+const echipa = await getEntry('echipa', 'echipa/echipa');
+const nav = await getNavEntry('navigation', 'navigation/navigation');
+const assets = await getEntry('assets', 'assets/assets');
+
+// Unique, high-quality local images matching the descriptions of Anabelle, Pony, and Aris
+const memberImages = [
+  assets.data.teamAnabelle,
+  assets.data.teamPony,
+  assets.data.teamAris,
+  assets.data.teamCappuchino,
+  assets.data.teamCioco,
+  assets.data.teamArgo,
+  assets.data.teamYuki,
+  assets.data.teamScoty,
+  assets.data.teamRia,
+  assets.data.teamOnyx,
+];
+
+const getSpecialTrait = (member: (typeof echipa.data.members)[number]) => {
+  if ('specialTrait' in member && typeof member.specialTrait === 'string' && member.specialTrait.trim()) {
+    return member.specialTrait;
+  }
+
+  return member.description.split(/[.,;]/)[0].trim();
+};
+---
+
+<section id="echipa" class="py-24 bg-cream-50 relative overflow-hidden">
+  <div class="mx-auto max-w-7xl px-6 relative z-10">
+    <div class="text-center mb-20 reveal">
+      <span class="text-sand-900 font-sans text-xs font-bold tracking-[0.2em] uppercase mb-3 block">{nav.data.links[2].label}</span>
+      <h2 class="font-serif font-bold text-forest-950 mb-6 text-3xl sm:text-4xl lg:text-5xl tracking-tight">
+        {echipa.data.sectionTitle}
+      </h2>
+      <div class="w-16 h-[2px] bg-sand-900 mx-auto mb-6"></div>
+      <p class="font-sans text-slate-600 mb-4 max-w-2xl mx-auto text-lg leading-relaxed">
+        {echipa.data.description}
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8" id="team-grid">
+      {echipa.data.members.map((member, idx) => (
+        <div
+          class="bg-white rounded-3xl overflow-hidden shadow-sm hover-lift transition-all duration-300 flex flex-col h-full reveal group border border-slate-100/50 team-card"
+          style={`transition-delay: ${idx * 150}ms`}
+        >
+          <div class="h-80 overflow-hidden relative">
+            <!-- Glassmorphism trait overlay badge -->
+            <div class="absolute top-4 left-4 z-20 max-w-[calc(100%-2rem)] bg-white/80 backdrop-blur-md px-3.5 py-1.5 rounded-full text-[10px] font-bold text-forest-950 shadow-sm border border-white/30 uppercase tracking-widest leading-tight">
+              {getSpecialTrait(member)}
+            </div>
+            <div class="absolute inset-0 bg-forest-950/5 z-10 transition-opacity duration-300 group-hover:opacity-0"></div>
+            <AstroImage
+              src={memberImages[idx] || memberImages[0]}
+              alt={member.imageAlt}
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <h3 class="font-serif font-bold text-forest-950 mb-1 text-xl tracking-tight transition-colors duration-300 group-hover:text-sand-900">
+              {member.name}
+            </h3>
+            <p class="text-sand-900 mb-4 font-sans font-semibold text-xs tracking-wider uppercase">{member.role}</p>
+            <p class="font-sans text-slate-500 text-sm leading-relaxed flex-grow">
+              {member.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <button id="team-see-all" class="mt-12 mx-auto block px-8 py-3 bg-forest-950 text-white rounded-full font-sans font-semibold hover:bg-forest-800 transition-colors" type="button">Vezi toată echipa</button>
+  </div>
+</section>
+
+<script>
+  const grid = document.getElementById('team-grid');
+  const cards = grid ? grid.querySelectorAll('.team-card') : [];
+  const button = document.getElementById('team-see-all');
+
+  let expanded = false;
+  function updateView() {
+    cards.forEach((card, i) => {
+      card.style.display = (expanded || i < 3) ? 'block' : 'none';
+    });
+    button.textContent = expanded ? 'Vezi mai puține' : 'Vezi toată echipa';
+  }
+  updateView();
+
+  if (button) {
+    button.addEventListener('click', () => {
+      expanded = !expanded;
+      updateView();
+    });
+  }
+</script>
