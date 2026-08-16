@@ -1,5 +1,6 @@
 ---
 import { getEntry } from 'astro:content';
+import '../styles/theme.css';
 
 const seo = await getEntry('seo', 'seo/seo');
 
@@ -8,9 +9,9 @@ interface Props {
   description?: string;
 }
 
-const { 
-  title = seo.data.title, 
-  description = seo.data.description 
+const {
+  title = seo.data.title,
+  description = seo.data.description
 } = Astro.props;
 ---
 
@@ -23,7 +24,6 @@ const {
     <meta name="description" content={description} />
 
     <!-- Favicon -->
-    <link rel="stylesheet" href="/theme.css" />
     <link rel="icon" type="image/png" href="/assets/images/logo_echilibru.png" />
 
     <!-- Google Fonts: Inter & Playfair Display -->
@@ -160,7 +160,7 @@ const {
     </script>
   </body>
   <script>
-    // Dark‑mode toggle based on OS preference
+    // Dark mode toggle based on OS preference
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.dataset.theme = 'dark';
     }
