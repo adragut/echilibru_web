@@ -9,6 +9,8 @@
     "enabled": true
   },
   "vars": {
-    "NODE_ENV": "production"
+    "NODE_ENV": "production",
+    "SENDER_EMAIL": "onboarding@resend.dev",
+    "RECIPIENT_EMAIL": "terapie.echilibru@gmail.com"
   }
 }

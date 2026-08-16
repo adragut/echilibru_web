@@ -40,9 +40,12 @@ npm install
 npm run build
 wrangler deploy
 ```
-Set environment variables in Cloudflare dashboard:
-- `EMAIL_SERVICE`, `EMAIL_API_KEY`, `SENDER_EMAIL`, `RECIPIENT_EMAIL`
-- `NODE_ENV=production`
+Set secrets (encrypted environment variables):
+```bash
+wrangler secret put RESEND_API_KEY     # Your Resend API key
+wrangler secret put RECIPIENT_EMAIL    # terapie.echilibru@gmail.com
+```
+The `NODE_ENV` and `SENDER_EMAIL` variables are already set in `wrangler.jsonc`. `SENDER_EMAIL` defaults to `onboarding@resend.dev` which works for testing without domain verification.
 
 ### 4. Configure Cloudflare Pages (Alternative)
 If using Cloudflare Pages instead of Workers:
@@ -62,7 +65,7 @@ If using Cloudflare Pages instead of Workers:
 - **CMS won't load**: Check that `/admin/config.yml` is accessible
 - **Auth fails**: Verify OAuth proxy domain matches `base_url` in config.yml
 - **[object Object] errors**: Ensure `disable_nodejs_process_v2` flag is set
-- **Email not sending**: Check `EMAIL_API_KEY` is set in Cloudflare dashboard
+- **Email not sending**: Run `wrangler secret list` to verify `RESEND_API_KEY` is set. Test locally with `RESEND_API_KEY=<key> npm run dev` then submit the contact form.
 
 ## Migration Notes
 - Removed Netlify Identity/Git Gateway (not available on Cloudflare)
