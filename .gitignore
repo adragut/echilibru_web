@@ -73,7 +73,7 @@ tmp/.env
 .anthropic/
 .perplexity/
 .grok/
-.grok/
-.grok/
-.grok/
-.grok/
+
+.env.local
+.env
+.dev.vars
