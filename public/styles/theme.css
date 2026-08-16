@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* src/styles/theme.css */
+:root {
+  /* Brand palette */
+  --color-primary:   #7E4E27;   /* mocha */
+  --color-secondary: #0092B1;   /* cyan */
+  --color-primary-dark:   #5c381b;   /* dark mocha */
+  --color-secondary-dark: #006e8a;   /* dark cyan */
+
+  /* neutrals */
+  --color-bg:        #faf8f5;
+  --color-bg-dark:   #1a1a1a;
+  --color-text:      #2d2d2d;
+  --color-text-dark: #e0e0e0;
+}
+
+[data-theme="dark"] {
+  --color-bg:        var(--color-bg-dark);
+  --color-text:      var(--color-text-dark);
+  --color-primary:   var(--color-primary-dark);
+  --color-secondary: var(--color-secondary-dark);
+}
+
+/* Convenience overrides for existing utility classes */
+.bg-forest-950 { background-color: var(--color-primary) !important; }
+.text-forest-950 { color: var(--color-primary) !important; }
+.hover\:text-sand-900:hover { color: var(--color-secondary) !important; }
+.bg-forest-950:hover { background-color: var(--color-secondary) !important; }
