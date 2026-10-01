@@ -5,8 +5,8 @@ compatibility_flags = ["nodejs_compat", "disable_nodejs_process_v2"]
 [vars]
 NODE_ENV = "production"
 SENDER_EMAIL = "onboarding@resend.dev"
-RECIPIENT_EMAIL = "terapie.echilibru@gmail.com"
-GMAIL_USER="terapie.echilibru@gmail.com"
+RECIPIENT_EMAIL = "alexandru.marius.dragut@gmail.com"
+GMAIL_USER="alexandru.marius.dragut@gmail.com"
 
 [observability]
 enabled = false
