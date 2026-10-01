@@ -3,13 +3,11 @@ main = "dist/server/index.js"
 compatibility_date = "2026-08-14"
 compatibility_flags = ["nodejs_compat", "disable_nodejs_process_v2"]
 
-[secrets]
-RESEND_API_KEY = ""
-
 [vars]
 NODE_ENV = "production"
 SENDER_EMAIL = "onboarding@resend.dev"
 RECIPIENT_EMAIL = "terapie.echilibru@gmail.com"
+GMAIL_USER="terapie.echilibru@gmail.com"
 
 [observability]
 enabled = false
