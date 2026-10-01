@@ -7,6 +7,7 @@ NODE_ENV = "production"
 SENDER_EMAIL = "onboarding@resend.dev"
 RECIPIENT_EMAIL = "alexandru.marius.dragut@gmail.com"
 GMAIL_USER="alexandru.marius.dragut@gmail.com"
+RESEND_API_KEY
 
 [observability]
 enabled = false
