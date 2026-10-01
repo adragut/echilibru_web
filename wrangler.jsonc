@@ -29,7 +29,7 @@
     "SENDER_EMAIL": "onboarding@resend.dev",
     "RECIPIENT_EMAIL": "terapie.echilibru@gmail.com"
   },
-  "secrets": {
-    "RESEND_API_KEY": ""
-  }
+  "secrets": [
+    "RESEND_API_KEY"
+  ]
 }
