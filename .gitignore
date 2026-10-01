@@ -79,3 +79,7 @@ tmp/.env
 .dev.vars
 
 .wrangler/state/
+.wrangler/state/v3/cache/
+.wrangler/state/v3/images/
+.wrangler/state/v3/kv/
+.wrangler/state/v3/observability/

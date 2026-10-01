@@ -26,17 +26,22 @@
         return;
       }
 
+      // Detect local/dev environment
+      const isLocal = window.location.hostname === 'localhost' ||
+                      window.location.hostname === '127.0.0.1' ||
+                      window.location.hostname === 'echilibru-web.adragut.workers.dev';
+
       // Fetch config YAML - works for both local dev and production
       let config;
       try {
-        const configPath = '/admin/config.yml';
+        const configPath = isLocal ? '/api/config.yml' : '/admin/config.yml';
         const response = await fetch(configPath);
         if (!response.ok) throw new Error('Config fetch failed: ' + response.status);
         const yamlText = await response.text();
         config = jsyaml.load(yamlText);
       } catch (e) {
         console.error('Failed to load CMS config:', e);
-        console.error('Make sure /admin/config.yml is accessible');
+        console.error('Make sure /api/config.yml or /admin/config.yml is accessible');
         return;
       }
 
