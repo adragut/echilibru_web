@@ -1,5 +1,4 @@
 import type { APIRoute } from 'astro';
-import { env } from 'cloudflare:workers'; // 👈 Astro native module for Cloudflare bindings
 
 export const POST: APIRoute = async ({ request }) => {
   const data = await request.formData();
@@ -16,10 +15,11 @@ export const POST: APIRoute = async ({ request }) => {
     });
   }
 
-  // 🛡️ Fetch Cloudflare Workers environment secrets dynamically
-  const apiKey         = env.RESEND_API_KEY || '';
-  const senderEmail    = env.SENDER_EMAIL || 'onboarding@resend.dev';
-  const recipientEmail = env.RECIPIENT_EMAIL || 'terapie.echilibru@gmail.com';
+  // Cloudflare Workers environment variables
+  // RESEND_API_KEY should be set to your Resend API key
+  const apiKey    = import.meta.env.RESEND_API_KEY || '';
+  const senderEmail = import.meta.env.SENDER_EMAIL || 'onboarding@resend.dev';
+  const recipientEmail = import.meta.env.RECIPIENT_EMAIL || 'terapie.echilibru@gmail.com';
 
   if (!apiKey) {
     console.error('RESEND_API_KEY is not configured');
