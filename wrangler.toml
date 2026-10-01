@@ -1,0 +1,7 @@
+name = "echilibru-web"
+main = "dist/server/index.js"
+compatibility_date = "2026-08-14"
+compatibility_flags = ["nodejs_compat", "disable_nodejs_process_v2"]
+
+[secrets]
+RESEND_API_KEY
