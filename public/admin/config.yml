@@ -9,7 +9,7 @@ backend:
 media_folder: "public/assets/images"
 public_folder: "/assets/images"
 
-site_url: "https://echilibru-web.adragut.workers.dev"
+site_url: "https://echilibru.ro"
 
 # Enable the editorial workflow (draft/review/publish)
 publish_mode: editorial_workflow

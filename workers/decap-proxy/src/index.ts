@@ -140,14 +140,15 @@ export default {
     if (url.pathname === '/auth' || url.pathname.endsWith('/auth')) {
       const state = generateState();
       const scope = env.GITHUB_REPO_PRIVATE === '1' ? PRIVATE_SCOPE : BASE_SCOPE;
-      
+      const redirect_uri = `${url.origin}/callback`;
       const params = new URLSearchParams({
         client_id: env.GITHUB_OAUTH_CLIENT_ID,
-        redirect_uri: `${url.origin}/callback`,
+        redirect_uri,
         scope,
         state,
       });
-      
+
+      // Clear any query parameters from the incoming request
       return new Response(null, {
         status: 302,
         headers: {
